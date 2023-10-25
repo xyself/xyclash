@@ -1,6 +1,5 @@
 payload:
-  - DOMAIN-KEYWORD,pa.googleapis.com
   - DOMAIN-KEYWORD,cloud.cupronickel.goog
-  - DOMAIN-SUFFIX,oauth2.googleapis.com
-  - DOMAIN-SUFFIX,translate.googleapis.com
   - DOMAIN-SUFFIX,p.g-tun.com
+  - DOMAIN-SUFFIX,pa.googleapis.com
+  - DOMAIN-SUFFIX,oauth2.googleapis.com
