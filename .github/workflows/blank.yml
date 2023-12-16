@@ -13,14 +13,14 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v2
         with:
-          repository: ACL4SSR/ACL4SSR  # 指定要拉取的远程仓库
           ref: master  # 指定要拉取的分支为 master
 
       - name: Pull specific files from other repository
         run: |
-          mkdir -p rule/reject
+          mkdir -p lis/reject
           curl -LJO https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanAD.yaml -o rule/reject/BanAD.yaml
           curl -LJO https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml -o rule/reject/BanProgramAD.yaml
+          curl -LJO https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/LocalAreaNetwork.yaml -o list/reject/LocalAreaNetwork.yaml
           # 下载特定文件，并将其放置到你想要的目标文件夹
 
       - name: Commit changes
@@ -32,4 +32,4 @@ jobs:
 
       - name: Push changes
         run: |
-          git push  # 推送到当前仓库的 master 分支
+          git push https://github.com/xyself/xyclash.git master
