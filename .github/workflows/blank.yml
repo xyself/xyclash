@@ -3,7 +3,7 @@ name: Pull Specific Files
 on:
   schedule:
     - cron: '0 0 * * *'  # 设置你想要触发的定时，比如每天
-
+  workflow_dispatch:  # 添加手动触发的事件
 jobs:
   pull-files:
     runs-on: ubuntu-latest
