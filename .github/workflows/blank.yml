@@ -1,35 +1,29 @@
-name: Pull Specific Files
-
+name: Pull Files from ACL4SSR
 on:
+  push:
+    branches:
+      - master
   schedule:
-    - cron: '0 0 * * *'  # 设置你想要触发的定时，比如每天
-  workflow_dispatch:  # 添加手动触发的事件
+    - cron: '0 0 * * *'  # 每天执行一次
+  workflow_dispatch:
 
 jobs:
   pull-files:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v2
-        with:
-          ref: master  # 指定要拉取的分支为 master
-
-      - name: Pull specific files from other repository
+      - name: Download Files
         run: |
-          mkdir -p lis/reject
-          curl -LJO https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanAD.yaml -o rule/reject/BanAD.yaml
-          curl -LJO https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml -o rule/reject/BanProgramAD.yaml
-          curl -LJO https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/LocalAreaNetwork.yaml -o list/reject/LocalAreaNetwork.yaml
-          # 下载特定文件，并将其放置到你想要的目标文件夹
+          mkdir -p rule/reject
+          curl -o rule/reject/BanAD.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanAD.yaml
+          curl -o rule/reject/BanProgramAD.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml
+          # 如果有更多文件需要下载，可以在这里添加类似的命令
 
-      - name: Commit changes
+      - name: Commit files
         run: |
-          git config user.email "your.email@example.com"
-          git config user.name "xyself"
-          git add .
-          git commit -m "Pulling specific files from other repository"
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add rule/reject/
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-pull updated files"
 
       - name: Push changes
-        run: |
-          git push https://github.com/xyself/xyclash.git master
+        run: git push origin HEAD:master
