@@ -1,0 +1,29 @@
+name: Pull Specific Files
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 设置你想要触发的定时，比如每天
+
+jobs:
+  pull-files:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+        with:
+          ref: master  # 指定要拉取的分支为master
+
+      - name: Pull specific files from other repository
+        run: |
+          mkdir -p lis/reject
+          curl -LJO https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanAD.yaml -o rule/reject/BanAD.yaml
+          curl -LJO https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml -o rule/reject/BanProgramAD.yaml
+          curl -LJO https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/LocalAreaNetwork.yaml -o list/reject/LocalAreaNetwork.yaml
+          # 下载特定文件，并将其放置到你想要的目标文件夹
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Pulling specific files from other repository"
+          commit_user_name: "xyself"
