@@ -23,10 +23,14 @@ jobs:
           curl -LJO https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/LocalAreaNetwork.yaml -o lis/reject/LocalAreaNetwork.yaml
           # 下载特定文件，并将其放置到你想要的目标文件夹
 
-      - name: Commit and push changes
+      - name: Commit changes
         run: |
           git config user.email "your.email@example.com"
           git config user.name "YourUsername"
           git add .
           git commit -m "Pulling specific files from other repository"
-          git push
+
+      - name: Push changes
+        run: |
+          git remote add origin_with_token https://xyself:${{ secrets.PAT }}@github.com/xyself/xyclash
+          git push origin_with_token master
