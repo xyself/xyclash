@@ -32,5 +32,5 @@ jobs:
 
       - name: Push changes
         run: |
-          git remote add origin_with_token https://xyself:${{ secrets.PAT }}@github.com/xyself/xyclash
-          git push origin_with_token master
+          git push https://xyself:${{ secrets.PAT }}@github.com/xyself/xyclash master
+
