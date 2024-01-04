@@ -17,12 +17,8 @@ jobs:
 
       - name: Download Files
         run: |
-          mkdir -p rule/reject
-          mkdir -p list/reject
-          mkdir -p rule/direct
-          mkdir -p list/direct
-          mkdir -p rule/proxy
-          mkdir -p list/proxy
+          mkdir -p rule/reject list/reject rule/direct list/direct rule/proxy list/proxy
+
           # direct yaml
           curl -o rule/direct/ChinaDomain.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaDomain.yaml    
           curl -o rule/direct/ChinaIp.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaIp.yaml
@@ -52,7 +48,7 @@ jobs:
 
       - name: Commit files
         run: |
-          git add rule/reject/
+          git add rule/reject list/reject rule/direct list/direct rule/proxy list/proxy
           git diff --quiet && git diff --staged --quiet || git commit -m "Auto-pull updated files"
 
       - name: Push changes
