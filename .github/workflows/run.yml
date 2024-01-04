@@ -20,8 +20,8 @@ jobs:
           mkdir -p rule/reject
           mkdir -p list/reject
           # direct yaml
-          curl -o list/direct/ChinaDomain.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaDomain.yaml    
-          curl -o list/direct/ChinaIp.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaIp.yaml
+          curl -o rule/direct/ChinaDomain.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaDomain.yaml    
+          curl -o rule/direct/ChinaIp.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaIp.yaml
           # proxy  yaml
           curl -o rule/proxy/ProxyMedia.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyMedia.yaml
           curl -o rule/proxy/Telegram.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Telegram.yaml
