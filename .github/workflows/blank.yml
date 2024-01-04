@@ -18,10 +18,29 @@ jobs:
       - name: Download Files
         run: |
           mkdir -p rule/reject
+          mkdir -p list/reject
+          # direct yaml
+          curl -o list/direct/ChinaDomain.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaDomain.yaml    
+          curl -o list/direct/ChinaIp.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaIp.yaml
+          # proxy  yaml
+          curl -o rule/proxy/ProxyMedia.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyMedia.yaml
+          curl -o rule/proxy/Telegram.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Telegram.yaml
+          # reject yaml
           curl -o rule/reject/BanAD.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanAD.yaml
+          curl -o rule/reject/BanEasyListChina.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyListChina.yaml
           curl -o rule/reject/BanProgramAD.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml
-          # 如果有更多文件需要下载，可以在这里添加类似的命令
 
+          # direct list
+          curl -o list/direct/ChinaDomain.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list    
+          curl -o list/direct/ChinaIp.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list
+          # proxy  list
+          curl -o list/proxy/ProxyMedia.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+          curl -o list/proxy/Telegram.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+          
+          # reject list
+          curl -o list/reject/BanAD.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+          curl -o list/reject/BanEasyListChina.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list
+          curl -o list/reject/BanProgramAD.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
       - name: Configure Git
         run: |
           git config user.email "133769218+xyself@users.noreply.github.com"
