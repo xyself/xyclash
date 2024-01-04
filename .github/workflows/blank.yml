@@ -1,0 +1,36 @@
+name: Pull Files from ACL4SSR
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: '0 0 * * *'  # 每天执行一次
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  pull-files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+
+      - name: Download Files
+        run: |
+          mkdir -p rule/reject
+          curl -o rule/reject/BanAD.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanAD.yaml
+          curl -o rule/reject/BanProgramAD.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml
+          # 如果有更多文件需要下载，可以在这里添加类似的命令
+
+      - name: Configure Git
+        run: |
+          git config user.email "133769218+xyself@users.noreply.github.com"
+          git config user.name "xyself"
+
+      - name: Commit files
+        run: |
+          git add rule/reject/
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-pull updated files"
+
+      - name: Push changes
+        run: git push origin HEAD:master
