@@ -1,11 +1,11 @@
 payload:
- -  DST-PORT,6881-6889
- -  IP-CIDR,192.168.3.5/32,no-resolve
- -  IP-CIDR,192.168.3.6/32,no-resolve
- -  IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
- -  DOMAIN-SUFFIX,parsec.app
- -  DOMAIN-SUFFIX,wangsiyuan.synology.me
- -  DOMAIN-SUFFIX,tailscale.io
- -  DOMAIN-SUFFIX,xiaoyaoke-xy.koyeb.app
- -  DOMAIN-SUFFIX,cp.cloudflare.com
- -  DOMAIN-SUFFIX,www.gstatic.com
+  - DST-PORT,6881-6889
+  - IP-CIDR,192.168.3.5/32,no-resolve
+  - IP-CIDR,192.168.3.6/32,no-resolve
+  - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,parsec.app
+  - DOMAIN-SUFFIX,wangsiyuan.synology.me
+  - DOMAIN-SUFFIX,tailscale.io
+  - DOMAIN-SUFFIX,xiaoyaoke-xy.koyeb.app
+  - DOMAIN-SUFFIX,cp.cloudflare.com
+  - DOMAIN-SUFFIX,www.gstatic.com
