@@ -17,30 +17,27 @@ jobs:
 
       - name: Download Files
         run: |
-          mkdir -p rule/reject list/reject rule/direct list/direct rule/proxy list/proxy
+          mkdir -p rule/reject rule/direct rule/proxy
 
           # direct yaml
           curl -o rule/direct/ChinaDomain.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaDomain.yaml    
           curl -o rule/direct/ChinaIp.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaIp.yaml
+          curl -o rule/direct/ChinaIpV6.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaIpV6.yaml
+          curl -o rule/direct/ChinaDomain.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list    
+          curl -o rule/direct/ChinaIp.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list
+          curl -o rule/direct/ChinaIpV6.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIpV6.list
           # proxy  yaml
           curl -o rule/proxy/ProxyMedia.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyMedia.yaml
           curl -o rule/proxy/Telegram.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Telegram.yaml
+          curl -o rule/proxy/ProxyMedia.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+          curl -o rule/proxy/Telegram.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
           # reject yaml
           curl -o rule/reject/BanAD.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanAD.yaml
           curl -o rule/reject/BanEasyListChina.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyListChina.yaml
           curl -o rule/reject/BanProgramAD.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml
-
-          # direct list
-          curl -o list/direct/ChinaDomain.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list    
-          curl -o list/direct/ChinaIp.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list
-          # proxy  list
-          curl -o list/proxy/ProxyMedia.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
-          curl -o list/proxy/Telegram.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
-          
-          # reject list
-          curl -o list/reject/BanAD.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
-          curl -o list/reject/BanEasyListChina.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list
-          curl -o list/reject/BanProgramAD.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+          curl -o rule/reject/BanAD.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+          curl -o rule/reject/BanEasyListChina.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list
+          curl -o rule/reject/BanProgramAD.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
       - name: Configure Git
         run: |
           git config user.email "133769218+xyself@users.noreply.github.com"
@@ -48,7 +45,7 @@ jobs:
 
       - name: Commit files
         run: |
-          git add rule/reject list/reject rule/direct list/direct rule/proxy list/proxy
+          git add rule/reject rule/direct rule/proxy
           git diff --quiet && git diff --staged --quiet || git commit -m "Auto-pull updated files"
 
       - name: Push changes
