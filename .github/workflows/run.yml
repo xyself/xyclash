@@ -4,7 +4,7 @@ on:
     branches:
       - master
   schedule:
-    - cron: '0 0 * * *'  # 每天执行一次
+    - cron: '0 16 */3 * *'  # 每3天的中国时间晚上12点执行任务
   workflow_dispatch:
 permissions:
   contents: write
