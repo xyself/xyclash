@@ -54,9 +54,10 @@ jobs:
           tail -n +2 rule/proxy/Telegram.yaml >> rule/proxy/TelegramMedia.yaml
       - name: Merge Proxy List Files
         run: |
-          cat rule/proxy/ProxyMedia.list > rule/proxy/TelegramMedia.list
+          grep -v '^#' rule/proxy/ProxyMedia.list > rule/proxy/TelegramMedia.list
           echo "" >> rule/proxy/TelegramMedia.list  # 添加一个空行
-          cat rule/proxy/Telegram.list >> rule/proxy/TelegramMedia.list
+          grep -v '^#' rule/proxy/Telegram.list >> rule/proxy/TelegramMedia.list
+
 
 
       - name: Configure Git
