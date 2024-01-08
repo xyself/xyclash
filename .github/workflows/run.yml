@@ -32,7 +32,7 @@ jobs:
           curl -o rule/proxy/ProxyMedia.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
           curl -o rule/proxy/ProxyMedia.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyMedia.yaml
           curl -o rule/proxy/Telegram.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
-          curl -o rule/proxy/Telegram.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Telegram.yaml
+          curl -o rule/proxy/Telegram.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Telegram.yaml
           curl -o rule/proxy/Google.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.list
           curl -o rule/proxy/Google.yaml https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml
           curl -o rule/proxy/OpenAI.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.list
@@ -46,9 +46,12 @@ jobs:
           curl -o rule/reject/BanEasyListChina.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyListChina.yaml
           curl -o rule/reject/BanProgramAD.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
           curl -o rule/reject/BanProgramAD.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml
-      - name: Merge Proxy Lists
-        run: cat rule/proxy/ProxyMedia.list rule/proxy/Telegram.list > rule/proxy/TelegramMedia.list &&
-             cat rule/proxy/ProxyMedia.yaml rule/proxy/Telegram.yaml > rule/proxy/TelegramMedia.yaml
+
+      - name: Merge Proxy YAML Files
+        run: |
+          head -n 1 rule/proxy/ProxyMedia.yaml > rule/proxy/MergedProxy.yaml
+          tail -n +2 rule/proxy/ProxyMedia.yaml | grep -v '^payload:' >> rule/proxy/MergedProxy.yaml
+          tail -n +2 rule/proxy/Telegram.yaml >> rule/proxy/MergedProxy.yaml
 
       - name: Configure Git
         run: |
