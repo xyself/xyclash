@@ -136,3 +136,8 @@ dns:
   nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
+
+proxies:
+    - {name: One, server: 192.168.3.9, type: socks5, port: 7893, udp:true}
+proxy-groups:
+    - { name: "♾️", type: select, proxies: [DIRECT, 🚀, One]}
