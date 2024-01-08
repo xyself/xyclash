@@ -46,6 +46,9 @@ jobs:
           curl -o rule/reject/BanEasyListChina.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyListChina.yaml
           curl -o rule/reject/BanProgramAD.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
           curl -o rule/reject/BanProgramAD.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml
+      - name: Merge Proxy Lists
+        run: cat rule/proxy/ProxyMedia.list rule/proxy/Telegram.list > rule/proxy/TelegramMedia.list &&
+             cat rule/proxy/ProxyMedia.yaml rule/proxy/Telegram.yaml > rule/proxy/TelegramMedia.yaml
 
       - name: Configure Git
         run: |
