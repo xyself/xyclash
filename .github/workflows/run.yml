@@ -49,9 +49,11 @@ jobs:
 
       - name: Merge Proxy YAML Files
         run: |
-          head -n 1 rule/proxy/ProxyMedia.yaml > rule/proxy/MergedProxy.yaml
-          tail -n +2 rule/proxy/ProxyMedia.yaml | grep -v '^payload:' >> rule/proxy/MergedProxy.yaml
-          tail -n +2 rule/proxy/Telegram.yaml >> rule/proxy/MergedProxy.yaml
+          head -n 1 rule/proxy/ProxyMedia.yaml > rule/proxy/TelegramProxy.yaml
+          tail -n +2 rule/proxy/ProxyMedia.yaml | grep -v '^payload:' >> rule/proxy/TelegramProxy.yaml
+          tail -n +2 rule/proxy/Telegram.yaml >> rule/proxy/TelegramProxy.yaml
+      - name: Merge Proxy List Files
+        run: cat rule/proxy/ProxyMedia.list rule/proxy/Telegram.list > rule/proxy/TelegramProxy.list
 
       - name: Configure Git
         run: |
