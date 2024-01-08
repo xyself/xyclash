@@ -461,7 +461,8 @@ USER-AGENT,*YouTubeMusic*
 USER-AGENT,*com.google.ios.youtubemusic*
 USER-AGENT,YouTubeMusic*
 USER-AGENT,com.google.ios.youtubemusic*
-DOMAIN,music.youtube.com# Telegram
+DOMAIN,music.youtube.com
+# Telegram
 #PROCESS-NAME,Telegram.exe
 #PROCESS-NAME,org.telegram.messenger
 DOMAIN-SUFFIX,t.me
