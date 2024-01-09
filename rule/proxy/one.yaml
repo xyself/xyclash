@@ -2,7 +2,6 @@ payload:
 # 🧩
 # 内容：googleone域名
 # 数量：9条
-  - DOMAIN-SUFFIX,p.g-tun.com
   - DOMAIN-SUFFIX,connectivitycheck.gstatic.com
   - DOMAIN-SUFFIX,zinc.cloud.cupronickel.goog
   - DOMAIN-SUFFIX,brass.cloud.cupronickel.goog
