@@ -24,3 +24,4 @@ payload:
   - DOMAIN-SUFFIX,github.com
   - DOMAIN-SUFFIX,translate.googleapis.com
   - DOMAIN-SUFFIX,googlevideo.com
+  - DOMAIN-SUFFIX,googleapis.com
