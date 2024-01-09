@@ -59,5 +59,4 @@ payload:
   - DOMAIN-SUFFIX,spring.net
   - DOMAIN-SUFFIX,stackoverflow.com
   - DOMAIN-SUFFIX,ampproject.org
-  - DOMAIN-SUFFIX,googlevideo.com
-  - DOMAIN-SUFFIX,googleapis.com
+  - DOMAIN-KEYWORD,googlevideo.com
