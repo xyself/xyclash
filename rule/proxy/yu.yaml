@@ -1,4 +1,21 @@
 payload:
+#🐟
+  - IP-CIDR,117.21.204.45/32
+  - DOMAIN-SUFFIX,remotedesktop-pa.googleapis.com
+  - DOMAIN-SUFFIX,lens-pa.googleapis.com
+  - DOMAIN-SUFFIX,nydus.battle.net
+  - DOMAIN-SUFFIX,app-measurement.com
+  - DOMAIN-SUFFIX,rsshub.app
+  - DOMAIN-SUFFIX,www.googletagmanager.com
+  - DOMAIN-SUFFIX,raw.githubusercontent.com
+  - DOMAIN-SUFFIX,msftconnecttest.com
+  - DOMAIN-SUFFIX,msftncsi.com
+  - DOMAIN-SUFFIX,update.googleapis.com
+  - DOMAIN-SUFFIX,passwordsleakcheck-pa.googleapis.com
+  - DOMAIN-SUFFIX,remotedesktop-pa.googleapis.com
+  - DOMAIN-SUFFIX,jnn-pa.googleapis.com
+  - DOMAIN-SUFFIX,translate.googleapis.com
+  - DOMAIN-SUFFIX,translate-pa.googleapis.com
   - DOMAIN-SUFFIX,obsproject.com
   - DOMAIN-SUFFIX,us.dangbei.com
   - DOMAIN-SUFFIX,emotn.com
@@ -22,6 +39,25 @@ payload:
   - DOMAIN-SUFFIX,hubciddata.sandai.net
   - DOMAIN-SUFFIX,mypikpak.com
   - DOMAIN-SUFFIX,github.com
-  - DOMAIN-SUFFIX,translate.googleapis.com
+  - DOMAIN-SUFFIX,apache.org
+  - DOMAIN-SUFFIX,docker.com
+  - DOMAIN-SUFFIX,elastic.co
+  - DOMAIN-SUFFIX,elastic.com
+  - DOMAIN-SUFFIX,gcr.io
+  - DOMAIN-SUFFIX,gitlab.com
+  - DOMAIN-SUFFIX,gitlab.io
+  - DOMAIN-SUFFIX,jitpack.io
+  - DOMAIN-SUFFIX,maven.org
+  - DOMAIN-SUFFIX,medium.com
+  - DOMAIN-SUFFIX,mvnrepository.com
+  - DOMAIN-SUFFIX,quay.io
+  - DOMAIN-SUFFIX,reddit.com
+  - DOMAIN-SUFFIX,redhat.com
+  - DOMAIN-SUFFIX,sonatype.org
+  - DOMAIN-SUFFIX,sourcegraph.com
+  - DOMAIN-SUFFIX,spring.io
+  - DOMAIN-SUFFIX,spring.net
+  - DOMAIN-SUFFIX,stackoverflow.com
+  - DOMAIN-SUFFIX,ampproject.org
   - DOMAIN-SUFFIX,googlevideo.com
   - DOMAIN-SUFFIX,googleapis.com
