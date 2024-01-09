@@ -71,4 +71,4 @@ jobs:
           git diff --quiet && git diff --staged --quiet || git commit -m "Auto-pull updated files"
 
       - name: Push changes
-        run: git push origin HEAD:master
+        run: git push master HEAD:master
