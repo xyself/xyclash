@@ -1,13 +1,13 @@
 # NAME: PrivateTracker
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2024-02-19 02:16:22
-# DOMAIN: 144
+# UPDATED: 2024-02-22 02:16:08
+# DOMAIN: 143
 # DOMAIN-KEYWORD: 4
 # DOMAIN-SUFFIX: 122
 # IP-CIDR: 8
 # IP-CIDR6: 2
-# TOTAL: 280
+# TOTAL: 279
 payload:
   - DOMAIN,1337.abcvg.info
   - DOMAIN,1c.premierzal.ru
@@ -23,7 +23,6 @@ payload:
   - DOMAIN,bt1.archive.org
   - DOMAIN,bt2.archive.org
   - DOMAIN,bvarf.tracker.sh
-  - DOMAIN,canardscitrons.nohost.me
   - DOMAIN,ch3oh.ru
   - DOMAIN,concen.org
   - DOMAIN,d40969.acod.regrucolo.ru
@@ -39,6 +38,7 @@ payload:
   - DOMAIN,ipv6.fuuuuuck.com
   - DOMAIN,ipv6.rer.lol
   - DOMAIN,isk.richardsw.club
+  - DOMAIN,jutone.com
   - DOMAIN,mail.artixlinux.org
   - DOMAIN,martin-gebhardt.eu
   - DOMAIN,moonburrow.club
@@ -52,7 +52,6 @@ payload:
   - DOMAIN,open.acgtracker.com
   - DOMAIN,open.demonii.com
   - DOMAIN,open.dstud.io
-  - DOMAIN,open.free-tracker.ga
   - DOMAIN,open.stealth.si
   - DOMAIN,open.tracker.cl
   - DOMAIN,open.tracker.ink
@@ -114,6 +113,7 @@ payload:
   - DOMAIN,tracker.mirrorbay.org
   - DOMAIN,tracker.moeking.me
   - DOMAIN,tracker.mywaifu.best
+  - DOMAIN,tracker.netmap.top
   - DOMAIN,tracker.openbittorrent.com
   - DOMAIN,tracker.opentrackr.org
   - DOMAIN,tracker.openwebtorrent.com
@@ -145,7 +145,6 @@ payload:
   - DOMAIN,ttk2.nbaonlineservice.com
   - DOMAIN,u4.trakx.crim.ist
   - DOMAIN,u6.trakx.crim.ist
-  - DOMAIN,uraniumhexafluori.de
   - DOMAIN,v6-tracker.0g.cx
   - DOMAIN,wepzone.net
   - DOMAIN,www.all4nothin.net
