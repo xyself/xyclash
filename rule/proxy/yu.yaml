@@ -60,3 +60,4 @@ payload:
   - DOMAIN-SUFFIX,stackoverflow.com
   - DOMAIN-SUFFIX,ampproject.org
   - DOMAIN-KEYWORD,googlevideo.com
+  - DOMAIN-SUFFIX,emotn.com
