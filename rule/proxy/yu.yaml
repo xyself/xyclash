@@ -62,3 +62,4 @@ payload:
   - DOMAIN-KEYWORD,googlevideo.com
   - DOMAIN-KEYWORD,emotn.com
   - DOMAIN-KEYWORD,keeflys.com
+  - DOMAIN-SUFFIX,clientservices.googleapis.com
