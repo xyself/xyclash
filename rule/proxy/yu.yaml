@@ -1,6 +1,13 @@
 payload:
 #🐟
   - IP-CIDR,117.21.204.45/32
+  - DOMAIN-SUFFIX,update.googleapis.com
+  - DOMAIN-SUFFIX,passwordsleakcheck-pa.googleapis.com
+  - DOMAIN-SUFFIX,remotedesktop-pa.googleapis.com
+  - DOMAIN-SUFFIX,jnn-pa.googleapis.com
+  - DOMAIN-SUFFIX,translate.googleapis.com
+  - DOMAIN-SUFFIX,translate-pa.googleapis.com
+  - DOMAIN-SUFFIX,clientservices.googleapis.com
   - DOMAIN-SUFFIX,remotedesktop-pa.googleapis.com
   - DOMAIN-SUFFIX,lens-pa.googleapis.com
   - DOMAIN-SUFFIX,nydus.battle.net
@@ -10,12 +17,6 @@ payload:
   - DOMAIN-SUFFIX,raw.githubusercontent.com
   - DOMAIN-SUFFIX,msftconnecttest.com
   - DOMAIN-SUFFIX,msftncsi.com
-  - DOMAIN-SUFFIX,update.googleapis.com
-  - DOMAIN-SUFFIX,passwordsleakcheck-pa.googleapis.com
-  - DOMAIN-SUFFIX,remotedesktop-pa.googleapis.com
-  - DOMAIN-SUFFIX,jnn-pa.googleapis.com
-  - DOMAIN-SUFFIX,translate.googleapis.com
-  - DOMAIN-SUFFIX,translate-pa.googleapis.com
   - DOMAIN-SUFFIX,obsproject.com
   - DOMAIN-SUFFIX,us.dangbei.com
   - DOMAIN-SUFFIX,emotn.com
@@ -62,4 +63,4 @@ payload:
   - DOMAIN-KEYWORD,googlevideo.com
   - DOMAIN-KEYWORD,emotn.com
   - DOMAIN-KEYWORD,keeflys.com
-  - DOMAIN-SUFFIX,clientservices.googleapis.com
+  - DOMAIN-KEYWORD,gitbook.com
