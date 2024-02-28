@@ -1,6 +1,9 @@
 payload:
 #🐟
   - IP-CIDR,117.21.204.45/32
+  - DOMAIN-SUFFIX,translate.googleapis.com
+  - DOMAIN-SUFFIX,play-lh.googleusercontent.com
+  - DOMAIN-SUFFIX,translate.google.com
   - DOMAIN-KEYWORD,accounts.google.com
   - DOMAIN-KEYWORD,googleapis.com
   - DOMAIN-KEYWORD,googleapis.cn
