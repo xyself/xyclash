@@ -1,7 +1,9 @@
 payload:
 #🐟
   - IP-CIDR,117.21.204.45/32
-  - DOMAIN-KEYWORD,googleapis
+  - DOMAIN-KEYWORD,googleapis.com
+  - DOMAIN-KEYWORD,googleapis.cn
+  - DOMAIN-KEYWORD,googleapi
   - DOMAIN-SUFFIX,nydus.battle.net
   - DOMAIN-SUFFIX,app-measurement.com
   - DOMAIN-SUFFIX,rsshub.app
