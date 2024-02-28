@@ -13,3 +13,4 @@ payload:
   - DOMAIN,zinc.cloud.cupronickel.goog
   - DOMAIN,brass.cloud.cupronickel.goog
   - DOMAIN,connectivitycheck.gstatic.com
+  - DOMAIN,content-autofill.googleapis.com
