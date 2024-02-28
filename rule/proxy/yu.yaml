@@ -1,6 +1,7 @@
 payload:
 #🐟
   - IP-CIDR,117.21.204.45/32
+  - DOMAIN-KEYWORD,accounts.google.com
   - DOMAIN-KEYWORD,googleapis.com
   - DOMAIN-KEYWORD,googleapis.cn
   - DOMAIN-KEYWORD,googleapi
