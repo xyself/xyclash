@@ -8,6 +8,7 @@ payload:
   - DOMAIN-KEYWORD,googleapis.com
   - DOMAIN-KEYWORD,googleapis.cn
   - DOMAIN-KEYWORD,googleapi
+  - DOMAIN-KEYWORD,googlevideo.com
   - DOMAIN-SUFFIX,nydus.battle.net
   - DOMAIN-SUFFIX,app-measurement.com
   - DOMAIN-SUFFIX,rsshub.app
