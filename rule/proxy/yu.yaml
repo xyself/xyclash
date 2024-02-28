@@ -1,15 +1,7 @@
 payload:
 #🐟
   - IP-CIDR,117.21.204.45/32
-  - DOMAIN-SUFFIX,update.googleapis.com
-  - DOMAIN-SUFFIX,passwordsleakcheck-pa.googleapis.com
-  - DOMAIN-SUFFIX,remotedesktop-pa.googleapis.com
-  - DOMAIN-SUFFIX,jnn-pa.googleapis.com
-  - DOMAIN-SUFFIX,translate.googleapis.com
-  - DOMAIN-SUFFIX,translate-pa.googleapis.com
-  - DOMAIN-SUFFIX,clientservices.googleapis.com
-  - DOMAIN-SUFFIX,remotedesktop-pa.googleapis.com
-  - DOMAIN-SUFFIX,lens-pa.googleapis.com
+  - DOMAIN-KEYWORD,googleapis
   - DOMAIN-SUFFIX,nydus.battle.net
   - DOMAIN-SUFFIX,app-measurement.com
   - DOMAIN-SUFFIX,rsshub.app
