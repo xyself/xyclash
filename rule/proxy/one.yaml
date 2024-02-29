@@ -3,6 +3,7 @@ payload:
 # 内容：googleone域名
 # 数量：9条
   - DOMAIN,accounts,google.com
+  - DOMAIN,assouth.p.g-tun.com
   - DOMAIN,beryllium-pa.googleapis.com
   - DOMAIN,scone-pa.googleapis.com
   - DOMAIN,phosphor-pa.googleapis.com
