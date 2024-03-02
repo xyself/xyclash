@@ -5,8 +5,6 @@ payload:
   - DOMAIN-SUFFIX,play-lh.googleusercontent.com
   - DOMAIN-SUFFIX,translate.google.com
   - DOMAIN-KEYWORD,accounts.google.com
-  - DOMAIN-KEYWORD,googleapis.com
-  - DOMAIN-KEYWORD,googleapis.cn
   - DOMAIN-KEYWORD,googleapi
   - DOMAIN-KEYWORD,googlevideo.com
   - DOMAIN-SUFFIX,nydus.battle.net
