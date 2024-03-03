@@ -7,5 +7,7 @@ payload:
   - DOMAIN-SUFFIX,parsec.app
   - DOMAIN-SUFFIX,wangsiyuan.synology.me
   - DOMAIN-SUFFIX,tailscale.io
+  - DOMAIN-SUFFIX,tailscale.com
   - DOMAIN-SUFFIX,xiaoyaoke-xy.koyeb.app
   - DOMAIN-SUFFIX,www.zerotier.com
+  - DOMAIN-SUFFIX,assouth.p.g-tun.com
