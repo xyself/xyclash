@@ -1,12 +1,12 @@
 payload:
-  - DST-PORT,6881-6889
   - IP-CIDR,192.168.3.5/32,no-resolve
   - IP-CIDR,192.168.3.6/32,no-resolve
   - IP-CIDR,192.168.3.7/32,no-resolve
-  - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
   - DOMAIN-SUFFIX,parsec.app
   - DOMAIN-SUFFIX,wangsiyuan.synology.me
   - DOMAIN-SUFFIX,tailscale.io
   - DOMAIN-SUFFIX,tailscale.com
   - DOMAIN-SUFFIX,xiaoyaoke-xy.koyeb.app
   - DOMAIN-SUFFIX,www.zerotier.com
+  - DOMAIN-SUFFIX,v2ex.com
+  - DOMAIN-SUFFIX,cnbeta.com.tw
