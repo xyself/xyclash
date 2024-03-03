@@ -8,5 +8,3 @@ payload:
   - DOMAIN-SUFFIX,tailscale.com
   - DOMAIN-SUFFIX,xiaoyaoke-xy.koyeb.app
   - DOMAIN-SUFFIX,www.zerotier.com
-  - DOMAIN-SUFFIX,v2ex.com
-  - DOMAIN-SUFFIX,cnbeta.com.tw
