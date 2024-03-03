@@ -17,6 +17,7 @@ payload:
   - DOMAIN-SUFFIX,hub5pr.v6.phub.sandai.net
   - DOMAIN-SUFFIX,hubciddata.sandai.net
   - DOMAIN-SUFFIX,mypikpak.com
+  - DOMAIN-SUFFIX,api.spotify.com
   - DOMAIN-KEYWORD,emotn.com
   - DOMAIN-KEYWORD,keeflys.com
   - DOMAIN-KEYWORD,gitbook.com
