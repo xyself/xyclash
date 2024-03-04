@@ -27,3 +27,4 @@ payload:
   - DOMAIN-KEYWORD,discordapp.com
   - DOMAIN-KEYWORD,clientservices.googleapis.com
   - DOMAIN-KEYWORD,update.googleapis.com
+  - DOMAIN-KEYWORD,api.branch.io
