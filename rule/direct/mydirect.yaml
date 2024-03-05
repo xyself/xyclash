@@ -8,3 +8,4 @@ payload:
   - DOMAIN-SUFFIX,tailscale.com
   - DOMAIN-SUFFIX,xiaoyaoke-xy.koyeb.app
   - DOMAIN-SUFFIX,zerotier.com
+  - DOMAIN-SUFFIX,masuit.com
