@@ -1,4 +1,7 @@
 payload:
+  - DOMAIN-SUFFIX,sfstream.binance.com
+  - DOMAIN-SUFFIX,nbstream.binance.com
+  - DOMAIN-SUFFIX,sdstream.binance.com
   - DOMAIN-SUFFIX,www.binance.com
   - DOMAIN-SUFFIX,sdstream.binance.com
   - DOMAIN-SUFFIX,nbstream.binance.com
