@@ -1,12 +1,12 @@
 # NAME: PrivateTracker
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2024-03-21 15:52:18
-# DOMAIN: 145
+# UPDATED: 2024-03-25 02:14:28
+# DOMAIN: 143
 # DOMAIN-KEYWORD: 4
 # DOMAIN-SUFFIX: 122
 # IP-CIDR: 6
-# TOTAL: 277
+# TOTAL: 275
 DOMAIN,1337.abcvg.info
 DOMAIN,1c.premierzal.ru
 DOMAIN,6.pocketnet.app
@@ -35,7 +35,6 @@ DOMAIN,free.publictracker.xyz
 DOMAIN,ipv4.rer.lol
 DOMAIN,ipv6.fuuuuuck.com
 DOMAIN,ipv6.rer.lol
-DOMAIN,isk.richardsw.club
 DOMAIN,jutone.com
 DOMAIN,mail.artixlinux.org
 DOMAIN,martin-gebhardt.eu
@@ -62,16 +61,14 @@ DOMAIN,p2p.publictracker.xyz
 DOMAIN,p4p.arenabg.com
 DOMAIN,pirate.t-1.org
 DOMAIN,public.publictracker.xyz
-DOMAIN,public.tracker.vraphim.com
-DOMAIN,r.l5.ca
 DOMAIN,retracker.hotplug.ru
 DOMAIN,retracker.lanta.me
 DOMAIN,retracker01-msk-virt.corbina.net
+DOMAIN,run-2.publictracker.xyz
 DOMAIN,run.publictracker.xyz
 DOMAIN,ryjer.com
 DOMAIN,seedpeer.net
 DOMAIN,shahidrazi.online
-DOMAIN,su-data.com
 DOMAIN,t.acg.rip
 DOMAIN,t.overflow.biz
 DOMAIN,t1.hloli.org
@@ -92,19 +89,19 @@ DOMAIN,tracker.artixlinux.org
 DOMAIN,tracker.auctor.tv
 DOMAIN,tracker.bt4g.com
 DOMAIN,tracker.cloudit.top
-DOMAIN,tracker.cubonegro.lol
 DOMAIN,tracker.cyberia.is
 DOMAIN,tracker.ddunlimited.net
 DOMAIN,tracker.dler.com
 DOMAIN,tracker.dler.org
-DOMAIN,tracker.dump.cl
 DOMAIN,tracker.edkj.club
 DOMAIN,tracker.electro-torrent.pl
+DOMAIN,tracker.farted.net
 DOMAIN,tracker.filemail.com
 DOMAIN,tracker.files.fm
 DOMAIN,tracker.fnix.net
 DOMAIN,tracker.gbitt.info
 DOMAIN,tracker.gcrreen.xyz
+DOMAIN,tracker.imgoingto.icu
 DOMAIN,tracker.ipfsscan.io
 DOMAIN,tracker.ipv6tracker.org
 DOMAIN,tracker.ipv6tracker.ru
@@ -115,6 +112,7 @@ DOMAIN,tracker.loligirl.cn
 DOMAIN,tracker.moeking.me
 DOMAIN,tracker.mywaifu.best
 DOMAIN,tracker.netmap.top
+DOMAIN,tracker.open-data.network
 DOMAIN,tracker.opentrackr.org
 DOMAIN,tracker.openwebtorrent.com
 DOMAIN,tracker.picotorrent.one
@@ -125,13 +123,13 @@ DOMAIN,tracker.skyts.net
 DOMAIN,tracker.srv00.com
 DOMAIN,tracker.t-rb.org
 DOMAIN,tracker.tamersunion.org
-DOMAIN,tracker.theoks.net
 DOMAIN,tracker.therarbg.com
 DOMAIN,tracker.therarbg.to
 DOMAIN,tracker.tiny-vps.com
 DOMAIN,tracker.torrent.eu.org
 DOMAIN,tracker.torrust-demo.com
 DOMAIN,tracker.tryhackx.org
+DOMAIN,tracker.vds.nz
 DOMAIN,tracker.yemekyedim.com
 DOMAIN,tracker1.520.jp
 DOMAIN,tracker1.bt.moack.co.kr
