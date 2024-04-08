@@ -1,5 +1,4 @@
 payload:
-  - DOMAIN-KEYWORD,tradingview.com
   - DOMAIN-SUFFIX,api.saasexch.io
   - DOMAIN-SUFFIX,edge-api.saasexch.com
   # > Forum
