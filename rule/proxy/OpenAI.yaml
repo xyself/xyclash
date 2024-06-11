@@ -3,7 +3,6 @@
 payload:
   - DOMAIN-KEYWORD,openai
   - DOMAIN-SUFFIX,auth0.com
-  - DOMAIN-SUFFIX,api.cloudflareclient.com
   - DOMAIN-SUFFIX,challenges.cloudflare.com
   - DOMAIN-SUFFIX,client-api.arkoselabs.com
   - DOMAIN-SUFFIX,events.statsigapi.net
