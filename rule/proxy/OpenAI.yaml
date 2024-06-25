@@ -2,6 +2,7 @@
 # 数量：111条
 payload:
   - DOMAIN-KEYWORD,openai
+  - DOMAIN-SUFFIX,perplexity.ai
   - DOMAIN-SUFFIX,auth0.com
   - DOMAIN-SUFFIX,challenges.cloudflare.com
   - DOMAIN-SUFFIX,client-api.arkoselabs.com
