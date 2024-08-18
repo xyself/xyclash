@@ -13,4 +13,4 @@ payload:
   - DOMAIN-SUFFIX,synology.com
   - DOMAIN-SUFFIX,whatismyip.akamai.com
   - DOMAIN-SUFFIX,digitalocean.com
-
+  - DOMAIN-SUFFIX,tts.speech.microsoft.com
