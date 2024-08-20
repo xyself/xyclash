@@ -22,11 +22,9 @@ jobs:
           # fake yaml
           curl -o rule/fakeip/fakeip-filter.mrs https://raw.githubusercontent.com/DustinWin/ruleset_geodata/raw/clash-ruleset/fakeip-filter.mrs
           # direct yaml
-          curl -o rule/proxy/telegram.mrs https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/raw/meta/geo/geosite/telegram.mrs
           # proxy  yaml
-          curl -o rule/proxy/telegramip.mrs https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/raw/meta/geo/geoip/telegram.mrs
-          curl -o rule/proxy/telegram.mrs https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/raw/meta/geo/geosite/telegram.mrs
-
+          curl -o rule/proxy/telegramip.mrs https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs
+          curl -o rule/proxy/telegram.mrs https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs
           curl -o rule/proxy/ProxyMedia.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
           curl -o rule/proxy/ProxyMedia.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyMedia.yaml
 
