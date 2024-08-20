@@ -102,12 +102,17 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Set upload URL
+        if: env.release_id == ''
+        id: set_upload_url
+        run: echo "upload_url=${{ steps.create_release.outputs.upload_url }}" >> $GITHUB_ENV
+
       - name: Upload Release Asset
-        if: env.release_id != ''
+        if: env.release_id == ''  # 确保仅在创建 Release 后执行
         uses: actions/upload-release-asset@v1
         with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: xyclash/rule/fakeip/fakeip-filter.mrs
+          upload_url: ${{ env.upload_url }}
+          asset_path: ./rule/fakeip/fakeip-filter.mrs
           asset_name: fakeip-filter.mrs
           asset_content_type: application/octet-stream
         env:
