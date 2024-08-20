@@ -73,7 +73,7 @@ jobs:
       - name: Get the current version
         id: get_version
         run: |
-          # 获取当前版本信息，使用当前日期时间作为版本号，如果没有 VERSION 文件则使用默认值
+          # 使用当前日期时间作为版本号，如果没有 VERSION 文件则使用默认值
           version="v1.0.0"  # 默认版本
           if [ -f VERSION ]; then
             version=$(cat VERSION)
@@ -87,7 +87,13 @@ jobs:
           response=$(curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             -s "https://api.github.com/repos/${{ github.repository }}/releases/tags/${{ env.version }}")
           release_id=$(echo "$response" | jq -r '.id // empty')
+          if [ -n "$release_id" ]; then
+            echo "Release already exists with ID: $release_id"
+          else
+            echo "No existing release found. Creating a new one."
+          fi
           echo "release_id=$release_id" >> $GITHUB_ENV
+          echo "Response: $response"  # Debugging output
 
       - name: Create Release
         if: env.release_id == ''
@@ -102,18 +108,17 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Set upload URL
-        if: env.release_id == ''
-        id: set_upload_url
-        run: echo "upload_url=${{ steps.create_release.outputs.upload_url }}" >> $GITHUB_ENV
-
       - name: Upload Release Asset
-        if: env.release_id == ''  # 确保仅在创建 Release 后执行
+        id: upload_asset
         uses: actions/upload-release-asset@v1
         with:
-          upload_url: ${{ env.upload_url }}
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./rule/fakeip/fakeip-filter.mrs
           asset_name: fakeip-filter.mrs
           asset_content_type: application/octet-stream
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Debug Release
+        run: |
+          echo "Upload URL: ${{ steps.create_release.outputs.upload_url }}"  # Print the upload URL for debugging
