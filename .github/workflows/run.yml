@@ -70,34 +70,32 @@ jobs:
           git add rule/direct rule/proxy rule/reject rule/fakeip
           git diff --quiet && git diff --staged --quiet || git commit -m "Auto-pull updated files"
 
-      - name: Get Release ID
-        id: get_release_id
+      - name: Get the current version
+        id: get_version
         run: |
-          # 获取所有 Releases 并查找具有指定标签的 Release
-          response=$(curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            -s "https://api.github.com/repos/${{ github.repository }}/releases")
-          release_id=$(echo "$response" | jq -r '.[] | select(.tag_name == "v1.0.0") | .id // empty')
-          echo "release_id=$release_id" >> $GITHUB_ENV
-          echo "release_exists=$(echo "$release_id" | jq -r '. // empty')" >> $GITHUB_ENV
-
-      - name: Delete Old Release
-        if: env.release_exists
-        run: |
-          if [ -n "${{ env.release_id }}" ]; then
-            echo "Deleting old release..."
-            curl -X DELETE \
-              -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-              "https://api.github.com/repos/${{ github.repository }}/releases/${{ env.release_id }}"
+          # 获取当前版本信息，如果没有版本文件，默认使用 "v1.0.0"
+          if [ -f VERSION ]; then
+            version=$(cat VERSION)
           else
-            echo "No old release found."
+            version="v1.0.0"
           fi
+          echo "version=$version" >> $GITHUB_ENV
+
+      - name: Check for existing Release
+        id: check_release
+        run: |
+          # 查询是否已经存在具有指定 tag 的 Release
+          response=$(curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -s "https://api.github.com/repos/${{ github.repository }}/releases/tags/${{ env.version }}")
+          release_id=$(echo "$response" | jq -r '.id // empty')
+          echo "release_id=$release_id" >> $GITHUB_ENV
 
       - name: Create Release
-        if: env.release_exists == 'false'
+        if: env.release_id == ''
         id: create_release
         uses: actions/create-release@v1
         with:
-          tag_name: v1.0.0
+          tag_name: ${{ env.version }}
           release_name: "FakeIP Filter Release"
           body: "发布 fakeip-filter.mrs 文件"
           draft: false
@@ -106,7 +104,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload Release Asset
-        if: env.release_exists == 'false'
+        if: env.release_id != ''
         uses: actions/upload-release-asset@v1
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
