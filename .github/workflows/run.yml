@@ -69,6 +69,16 @@ jobs:
         run: |
           git add rule/direct rule/proxy rule/reject rule/fakeip
           git diff --quiet && git diff --staged --quiet || git commit -m "Auto-pull updated files"
+      - name: Create Release and Upload Asset
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          release_name: fakeip-filter
+          tag: fakeip-filter
+          overwrite: true
+          body: "fakeip-filter.mrs 文件"
+          file_glob: true
+          file: ./rule/fakeip/fakeip-filter.mrs
 
       - name: Push changes
         run: git push origin HEAD:master
