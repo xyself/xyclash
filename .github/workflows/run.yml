@@ -69,7 +69,21 @@ jobs:
         run: |
           git add rule/direct rule/proxy rule/reject rule/fakeip
           git diff --quiet && git diff --staged --quiet || git commit -m "Auto-pull updated files"
+
+      - name: Check for existing release
+        id: check_release
+        run: |
+          release_exists=$(curl -sSL https://api.github.com/repos/${{ github.repository }}/releases/tags/v1.0.0 | grep '"message": "Not Found"')
+          if [ -z "$release_exists" ]; then
+            echo "Release exists"
+            echo "release_exists=true" >> $GITHUB_ENV
+          else
+            echo "Release does not exist"
+            echo "release_exists=false" >> $GITHUB_ENV
+          fi
+
       - name: Create Release
+        if: env.release_exists == 'false'
         id: create_release
         uses: actions/create-release@v1
         with:
@@ -82,6 +96,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload Release Asset
+        if: env.release_exists == 'false'
         uses: actions/upload-release-asset@v1
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
