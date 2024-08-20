@@ -20,23 +20,16 @@ jobs:
           mkdir -p rule/direct rule/proxy rule/reject rule/fakeip
 
           # fake yaml
-          curl -o rule/fakeip/fakeip-filter.mrs https://github.com/DustinWin/ruleset_geodata/raw/clash-ruleset/fakeip-filter.mrs
+          curl -o rule/fakeip/fakeip-filter.mrs https://raw.githubusercontent.com/DustinWin/ruleset_geodata/raw/clash-ruleset/fakeip-filter.mrs
           # direct yaml
-          curl -o rule/direct/ChinaDomain.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list  
-          curl -o rule/direct/ChinaDomain.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaDomain.yaml    
-          curl -o rule/direct/ChinaIp.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list
-          curl -o rule/direct/ChinaIp.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaIp.yaml
-          curl -o rule/direct/ChinaIpV6.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIpV6.list
-          curl -o rule/direct/ChinaIpV6.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaIpV6.yaml
-          curl -o rule/direct/PrivateTracker.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PrivateTracker/PrivateTracker.list
-          curl -o rule/direct/PrivateTracker.yaml https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PrivateTracker/PrivateTracker.yaml
+          curl -o rule/proxy/telegram.mrs https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/raw/meta/geo/geosite/telegram.mrs
           # proxy  yaml
+          curl -o rule/proxy/telegramip.mrs https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/raw/meta/geo/geoip/telegram.mrs
+          curl -o rule/proxy/telegram.mrs https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/raw/meta/geo/geosite/telegram.mrs
+
           curl -o rule/proxy/ProxyMedia.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
           curl -o rule/proxy/ProxyMedia.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyMedia.yaml
-          curl -o rule/proxy/Telegram.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
-          curl -o rule/proxy/Telegram.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Telegram.yaml
-          curl -o rule/proxy/Google.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.list
-          curl -o rule/proxy/Google.yaml https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml
+
           curl -o rule/proxy/Blizzard.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Blizzard/Blizzard.list
           curl -o rule/proxy/Blizzard.yaml https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Blizzard/Blizzard_No_Resolve.yaml
           # reject yaml
@@ -46,17 +39,6 @@ jobs:
           curl -o rule/reject/BanEasyListChina.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyListChina.yaml
           curl -o rule/reject/BanProgramAD.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
           curl -o rule/reject/BanProgramAD.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml
-
-      - name: Merge Proxy YAML Files
-        run: |
-          head -n 1 rule/proxy/ProxyMedia.yaml > rule/proxy/TelegramMedia.yaml
-          tail -n +2 rule/proxy/ProxyMedia.yaml | grep -v '^payload:' >> rule/proxy/TelegramMedia.yaml
-          tail -n +2 rule/proxy/Telegram.yaml >> rule/proxy/TelegramMedia.yaml
-      - name: Merge Proxy List Files
-        run: |
-          cat rule/proxy/ProxyMedia.list > rule/proxy/TelegramMedia.list
-          echo "" >> rule/proxy/TelegramMedia.list  # 添加一个空行
-          cat rule/proxy/Telegram.list >> rule/proxy/TelegramMedia.list
 
 
 
@@ -69,56 +51,3 @@ jobs:
         run: |
           git add rule/direct rule/proxy rule/reject rule/fakeip
           git diff --quiet && git diff --staged --quiet || git commit -m "Auto-pull updated files"
-
-      - name: Get the current version
-        id: get_version
-        run: |
-          # 使用当前日期时间作为版本号，如果没有 VERSION 文件则使用默认值
-          version="v1.0.0"  # 默认版本
-          if [ -f VERSION ]; then
-            version=$(cat VERSION)
-          fi
-          echo "version=$version" >> $GITHUB_ENV
-
-      - name: Check for existing Release
-        id: check_release
-        run: |
-          # 查询是否已经存在具有指定 tag 的 Release
-          response=$(curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            -s "https://api.github.com/repos/${{ github.repository }}/releases/tags/${{ env.version }}")
-          release_id=$(echo "$response" | jq -r '.id // empty')
-          if [ -n "$release_id" ]; then
-            echo "Release already exists with ID: $release_id"
-          else
-            echo "No existing release found. Creating a new one."
-          fi
-          echo "release_id=$release_id" >> $GITHUB_ENV
-          echo "Response: $response"  # Debugging output
-
-      - name: Create Release
-        if: env.release_id == ''
-        id: create_release
-        uses: actions/create-release@v1
-        with:
-          tag_name: ${{ env.version }}
-          release_name: "FakeIP Filter Release"
-          body: "发布 fakeip-filter.mrs 文件"
-          draft: false
-          prerelease: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload Release Asset
-        id: upload_asset
-        uses: actions/upload-release-asset@v1
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./rule/fakeip/fakeip-filter.mrs
-          asset_name: fakeip-filter.mrs
-          asset_content_type: application/octet-stream
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Debug Release
-        run: |
-          echo "Upload URL: ${{ steps.create_release.outputs.upload_url }}"  # Print the upload URL for debugging

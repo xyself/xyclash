@@ -1,0 +1,15 @@
+IP-CIDR,192.168.3.5/32,no-resolve
+IP-CIDR,192.168.3.6/32,no-resolve
+IP-CIDR,192.168.3.7/32,no-resolve
+DOMAIN-SUFFIX,parsec.app
+DOMAIN-SUFFIX,wangsiyuan.synology.me
+DOMAIN-SUFFIX,tailscale.io
+DOMAIN-SUFFIX,tailscale.com
+DOMAIN-SUFFIX,xiaoyaoke-xy.koyeb.app
+DOMAIN-SUFFIX,zerotier.com
+DOMAIN-SUFFIX,masuit.com
+DOMAIN-SUFFIX,dyndns.com
+DOMAIN-SUFFIX,synology.com
+DOMAIN-SUFFIX,whatismyip.akamai.com
+DOMAIN-SUFFIX,digitalocean.com
+DOMAIN-SUFFIX,tts.speech.microsoft.com
