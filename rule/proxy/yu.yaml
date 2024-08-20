@@ -1,19 +1,19 @@
 payload:
 #🐟
-  - IP-CIDR,117.21.204.45/32
-  - DOMAIN-KEYWORD,tradingview.com
-  - DOMAIN-SUFFIX,obsproject.com
-  - DOMAIN-SUFFIX,us.dangbei.com
-  - DOMAIN-SUFFIX,emotn.com
-  - DOMAIN-SUFFIX,v2ex.com
-  - DOMAIN-SUFFIX,twitter.com
-  - DOMAIN-SUFFIX,twimg.com
-  - DOMAIN-SUFFIX,twitterscan.com
-  - DOMAIN-SUFFIX,mypikpak.com
-  - DOMAIN-SUFFIX,api.spotify.com
-  - DOMAIN-KEYWORD,emotn.com
-  - DOMAIN-KEYWORD,keeflys.com
-  - DOMAIN-KEYWORD,gitbook.com
-  - DOMAIN-KEYWORD,cnbeta.com.tw
-  - DOMAIN-KEYWORD,discord
-  - DOMAIN-KEYWORD,branch.io
+#   - 117.21.204.45/32
+    - +.tradingview.com
+    - +.obsproject.com
+    - +.us.dangbei.com
+    - +.emotn.com
+    - +.v2ex.com
+    - +.twitter.com
+    - +.twimg.com
+    - +.twitterscan.com
+    - +.mypikpak.com
+    - +.api.spotify.com
+    - +.emotn.com
+    - +.keeflys.com
+    - +.gitbook.com
+    - +.cnbeta.com.tw
+    - +.discord
+    - +.branch.io

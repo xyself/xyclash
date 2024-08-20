@@ -1,17 +1,14 @@
 payload:
-# 🧩
-# 内容：googleone域名
-# 数量：9条
-  - DOMAIN-SUFFIX,connectivitycheck.gstatic.com
-  - DOMAIN-SUFFIX,na4.p.g-tun.com
-  - DOMAIN-SUFFIX,assouth.p.g-tun.com
-  - DOMAIN-SUFFIX,prod.brass.cloud.cupronickel.goog
-  - DOMAIN-SUFFIX,brass.cloud.cupronickel.goog 
-#  - DOMAIN-SUFFIX,ocsp.pki.goog 
-  - DOMAIN-SUFFIX,phosphor-pa.googleapis.com
-  - DOMAIN-SUFFIX,scone-pa.googleapis.com
-  - DOMAIN-SUFFIX,beryllium-pa.googleapis.com
-  - DOMAIN-SUFFIX,subscriptionsmobile-pa.googleapis.com
-  - DOMAIN-SUFFIX,subscriptionsmanagement-pa.googleapis.com
-  - DOMAIN-SUFFIX,accounts.google.com
-  - DOMAIN-SUFFIX,oauth2.googleapis.com
+    - +.connectivitycheck.gstatic.com
+    - +.na4.p.g-tun.com
+    - +.assouth.p.g-tun.com
+    - +.prod.brass.cloud.cupronickel.goog
+    - +.brass.cloud.cupronickel.goog 
+#   - +.ocsp.pki.goog 
+    - +.phosphor-pa.googleapis.com
+    - +.scone-pa.googleapis.com
+    - +.beryllium-pa.googleapis.com
+    - +.subscriptionsmobile-pa.googleapis.com
+    - +.subscriptionsmanagement-pa.googleapis.com
+    - +.accounts.google.com
+    - +.oauth2.googleapis.com

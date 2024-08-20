@@ -1,12 +1,9 @@
-# 🧩
-# 内容：googleone域名
-# 数量：7条
-DOMAIN-SUFFIX,na4.p.g-tun.com
-DOMAIN-SUFFIX,assouth.p.g-tun.com
-DOMAIN-SUFFIX,connectivitycheck.gstatic.com
-DOMAIN-SUFFIX,zinc.cloud.cupronickel.goog
-DOMAIN-SUFFIX,brass.cloud.cupronickel.goog
-DOMAIN-SUFFIX,phosphor-pa.googleapis.com
-DOMAIN-SUFFIX,scone-pa.googleapis.com
-DOMAIN-SUFFIX,beryllium-pa.googleapis.com
-DOMAIN-SUFFIX,subscriptionsmobile-pa.googleapis.com 
++.na4.p.g-tun.com
++.assouth.p.g-tun.com
++.connectivitycheck.gstatic.com
++.zinc.cloud.cupronickel.goog
++.brass.cloud.cupronickel.goog
++.phosphor-pa.googleapis.com
++.scone-pa.googleapis.com
++.beryllium-pa.googleapis.com
++.subscriptionsmobile-pa.googleapis.com 
