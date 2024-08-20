@@ -69,18 +69,26 @@ jobs:
         run: |
           git add rule/direct rule/proxy rule/reject rule/fakeip
           git diff --quiet && git diff --staged --quiet || git commit -m "Auto-pull updated files"
-      - name: Download `fakeip-filter.mrs`
+      - name: Download File
         run: |
-          mkdir -p ./rule/fakeip/
           curl -L -o ./rule/fakeip/fakeip-filter.mrs https://github.com/xyself/xyclash/raw/master/rule/fakeip/fakeip-filter.mrs
 
-      - name: Create Release and Upload Asset
-        uses: svenstaro/upload-release-action@v2
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          release_name: FakeIP Filter Release
-          tag: fakeip-filter-release
-          overwrite: true
+          tag_name: v1.0.0
+          release_name: "FakeIP Filter Release"
           body: "发布 `fakeip-filter.mrs` 文件"
-          file_glob: true
-          file: ./rule/fakeip/fakeip-filter.mrs
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./rule/fakeip/fakeip-filter.mrs
+          asset_name: fakeip-filter.mrs
+          asset_content_type: application/octet-stream
