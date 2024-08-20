@@ -1,4 +1,5 @@
 name: Pull Files from ACL4SSR
+
 on:
   push:
     branches:
@@ -6,8 +7,10 @@ on:
   schedule:
     - cron: '0 16 */3 * *'  # 每3天的中国时间晚上12点执行任务
   workflow_dispatch:
+
 permissions:
   contents: write
+
 jobs:
   pull-files:
     runs-on: ubuntu-latest
@@ -22,7 +25,7 @@ jobs:
           # fake yaml
           curl -o rule/fakeip/fakeip-filter.mrs https://raw.githubusercontent.com/DustinWin/ruleset_geodata/raw/clash-ruleset/fakeip-filter.mrs
           # direct yaml
-          # proxy  yaml
+          # proxy yaml
           curl -o rule/proxy/telegramip.mrs https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs
           curl -o rule/proxy/telegram.mrs https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs
           curl -o rule/proxy/ProxyMedia.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
@@ -38,8 +41,6 @@ jobs:
           curl -o rule/reject/BanProgramAD.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
           curl -o rule/reject/BanProgramAD.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml
 
-
-
       - name: Configure Git
         run: |
           git config user.email "133769218+xyself@users.noreply.github.com"
@@ -47,5 +48,7 @@ jobs:
 
       - name: Commit files
         run: |
-          git add rule/direct rule/proxy rule/reject rule/fakeip
+          git add rule/reject rule/direct rule/proxy
           git diff --quiet && git diff --staged --quiet || git commit -m "Auto-pull updated files"
+      - name: Push changes
+        run: git push origin HEAD:master
