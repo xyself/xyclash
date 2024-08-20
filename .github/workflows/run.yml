@@ -17,7 +17,7 @@ jobs:
 
       - name: Download Files
         run: |
-          mkdir -p rule/reject rule/direct rule/proxy rule/fakeip
+          mkdir -p rule/direct rule/proxy rule/reject rule/fakeip
 
           # fake yaml
           curl -o rule/fakeip/fakeip-filter.mrs https://github.com/DustinWin/ruleset_geodata/raw/clash-ruleset/fakeip-filter.mrs
@@ -67,7 +67,7 @@ jobs:
 
       - name: Commit files
         run: |
-          git add rule/reject rule/direct rule/proxy
+          git add rule/direct rule/proxy rule/reject rule/fakeip
           git diff --quiet && git diff --staged --quiet || git commit -m "Auto-pull updated files"
 
       - name: Push changes
