@@ -19,6 +19,8 @@ jobs:
         run: |
           mkdir -p rule/reject rule/direct rule/proxy
 
+          # fake yaml
+          curl -o rule/fake/fakeip-filter.mrs https://github.com/DustinWin/ruleset_geodata/raw/clash-ruleset/fakeip-filter.mrs
           # direct yaml
           curl -o rule/direct/ChinaDomain.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list  
           curl -o rule/direct/ChinaDomain.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaDomain.yaml    
