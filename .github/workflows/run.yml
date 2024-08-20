@@ -73,11 +73,10 @@ jobs:
       - name: Get the current version
         id: get_version
         run: |
-          # 获取当前版本信息，如果没有版本文件，默认使用 "v1.0.0"
+          # 获取当前版本信息，使用当前日期时间作为版本号，如果没有 VERSION 文件则使用默认值
+          version="v1.0.0"  # 默认版本
           if [ -f VERSION ]; then
             version=$(cat VERSION)
-          else
-            version="v1.0.0"
           fi
           echo "version=$version" >> $GITHUB_ENV
 
