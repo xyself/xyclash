@@ -25,7 +25,7 @@ jobs:
           curl -o rule/fakeip/fakeip-filter.mrs https://raw.githubusercontent.com/DustinWin/ruleset_geodata/clash-ruleset/fakeip-filter.mrs
 
           # direct yaml
-          curl -o rule/direct/lan.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.yaml
+          curl -o rule/direct/lan.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
           curl -o rule/direct/lan.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/LocalAreaNetwork.yaml
           curl -o rule/direct/ChinaDomain.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list  
           curl -o rule/direct/ChinaDomain.yaml https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaDomain.yaml    
