@@ -2,10 +2,6 @@
 +.tailscale.io
 +.ts.net
 +.zerotier.com
-xiaoyaoke-xy.koyeb.app
-cdn.jsdelivr.net
-mirror.ghproxy.com
-+.parsec.app
 +.wangsiyuan.synology.me
 +.masuit.com
 +.dyndns.com
@@ -13,3 +9,7 @@ mirror.ghproxy.com
 +.whatismyip.akamai.com
 +.digitalocean.com
 +.tts.speech.microsoft.com
+stun6.parsec.app
+xiaoyaoke-xy.koyeb.app
+cdn.jsdelivr.net
+mirror.ghproxy.com
