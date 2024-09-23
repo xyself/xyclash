@@ -3,9 +3,6 @@ payload:
     - +.tailscale.io
     - +.ts.net
     - +.zerotier.com
-    - xiaoyaoke-xy.koyeb.app
-    - cdn.jsdelivr.net
-    - mirror.ghproxy.com
     - +.wangsiyuan.synology.me
     - +.masuit.com
     - +.dyndns.com
@@ -17,3 +14,4 @@ payload:
     - xiaoyaoke-xy.koyeb.app
     - cdn.jsdelivr.net
     - mirror.ghproxy.com
+    
