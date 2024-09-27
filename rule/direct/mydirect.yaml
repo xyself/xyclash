@@ -14,4 +14,4 @@ payload:
     - xiaoyaoke-xy.koyeb.app
     - cdn.jsdelivr.net
     - mirror.ghproxy.com
-    
+    - api-edge.cognitive.microsofttranslator.com
