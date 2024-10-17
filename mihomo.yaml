@@ -1,0 +1,293 @@
+#clash
+# 远程订阅相关
+p: &p {type: http, interval: 42300, health-check: {enable: true, url: http://cp.cloudflare.com, interval: 1800, timeout: 5000}}
+# 远程订阅
+proxy-providers:
+  free1: {<<: *p, url: "*", path: "./free1.yaml"}
+  free2: {<<: *p, url: "*", path: "./free2.yaml"}
+  free3: {<<: *p, url: "*", path: "./free3.yaml"}
+  free4: {<<: *p, url: "*", path: "./free4.yaml"}
+######### 锚点 end #########
+
+# 本地服务器
+proxies:
+
+
+# 1. 请把订阅链接填入引号""内使用,
+# 2. 或可通过Sub-Store进行订阅转换(或需自建Sub-Store服务)。# Clash Config Make by Coldvvater
+# TG Channel: https://t.me/Coldvvater_Channel
+# GitHub: https://github.com/Coldvvater
+# Update Date: 2024.09.15
+
+port: 8080                           # HTTP(S) 代理服务器端口
+socks-port: 10808                     # SOCKS5 代理端口
+mixed-port: 10809                    # 混合端口，HTTP和SOCKS5用一个端口
+redir-port: 7891                     # 透明代理端口，用于 Linux 和 MacOS
+tproxy-port: 7892                    # Transparent proxy server port for Linux (TProxy TCP and TProxy UDP)
+
+mode: rule                           # 规则模式：rule（规则） / global（全局代理）/ direct（全局直连）/ script (脚本)
+log-level: silent                     # 设置日志输出级别 (5 个级别：silent / error / warning / info / debug）
+allow-lan: true                # 允许局域网的连接（共享代理）
+bind-address: "*"                    # 监听IP白名单，可绑定单个IPv4和v6地址，"*" 为绑定所有IP地址，仅在将allow-lan设置为true时适用
+ipv6: false                           # 开启 IPv6 总开关，关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录
+udp: true                            # 是否允许 UDP 通过代理，默认为 false
+
+tcp-concurrent: true                 # TCP 并发，可选值 true/false
+unified-delay: true                  # 开启统一延迟时，会进行两次延迟测试，以消除连接握手等带来的不同类型节点的延迟差异，可选值 true/false
+find-process-mode: off              # 控制是否让 Clash 去匹配进程，always 开启，强制匹配所有进程，strict 默认，由 Clash 判断是否开启，off 不匹配进程，推荐在路由器上使用此模式
+global-client-fingerprint: chrome    # 全局 TLS 指纹，优先低于 proxy 内的 client-fingerprint，目前支持开启 TLS 传输的 TCP/grpc/WS/HTTP , 支持协议有 VLESS,Vmess 和 trojan
+keep-alive-interval: 900
+keep-alive-idle: 15
+
+
+external-ui: ui
+external-ui-name: metacubexd
+external-ui-url: https://mirror.ghproxy.com/https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip
+external-controller: 0.0.0.0:9090
+external-controller-tls: 127.0.0.1:9090
+secret: '12345'
+
+geodata-mode: true                  # 更改 geoip 使用文件，mmdb 或者 dat，可选 true/false,true为 dat，此项有默认值 false
+geodata-loader: memconservative      # GEO 文件加载模式，standard：标准加载器 memconservative：专为内存受限 (小内存) 设备优化的加载器 (默认值)
+geo-auto-update: true
+geo-update-interval: 24
+geox-url:
+  geoip: 'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat'
+  geosite: 'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat'
+  mmdb: 'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb'
+  asn: 'https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb'
+
+profile:
+  store-selected: true               # 储存 API 对策略组的选择，以供下次启动时使用
+  store-fake-ip: false               # 储存 fakeip 映射表，域名再次发生连接时，使用原有映射地址
+sniffer:
+  enable: true                       # 是否启用sniffer
+  force-dns-mapping: true            # 对 redir-host 类型识别的流量进行强制嗅探
+  parse-pure-ip: true                # 对所有未获取到域名的流量进行强制嗅探
+  override-destination: true         # 是否使用嗅探结果作为实际访问，默认为 true
+  sniff: {HTTP: {ports: [80, 8080-8880], override-destination: true}, TLS: {ports: [443, 8443]}, QUIC: {ports: [443, 8443]}}
+  force-domain:                      # 需要强制嗅探的域名（默认情况下只对IP进行嗅探）
+    - '+.v2ex.com'
+  skip-domain:                       # 需要跳过嗅探的域名。主要解决部分站点sni字段非域名，导致嗅探结果异常的问题，如米家设备Mijia Cloud
+    - 'Mijia Cloud'
+
+tun:
+  enable: false
+  stack: system 
+  device: mihomo
+  dns-hijack:
+    - any:53
+    - tcp://any:53
+  auto-route: true
+  auto-detect-interface: true
+  strict-route: true
+#     - 'connectivitycheck.gstatic.com'
+dns:
+  enable: true
+  prefer-h3: true
+  ipv6: false
+  listen: 0.0.0.0:1053
+  fake-ip-range: 198.18.0.1/16      # Fake-IP 解析地址池
+  enhanced-mode: fake-ip            # 模式：redir-host或fake-ip
+  fake-ip-filter: 
+    - rule-set:fakeip-filter
+    - '+.openai.com'
+    - '+.chatgpt.com'
+    - '+.perplexity.ai'
+    - '+.ingest.us.sentry.io'
+    - '+.parsec.app'
+    - bard.google.com
+    - gemini.google.com
+    - '+.ingest.us.sentry.io'
+    - '+.genet-dab.ts.net'
+    - '+.ts.net'
+    - '+.genet-dab.ts.net'
+    - 'log.tailscale.*'
+    - controlplane.tailscale.com
+  default-nameserver:
+    - tls://223.5.5.5:853
+    - tls://1.12.12.12:853
+  nameserver: 
+    - https://dns.cloudflare.com/dns-query
+    - https://dns.google/dns-query
+  proxy-server-nameserver:
+    - https://120.53.53.53/dns-query
+    - https://223.5.5.5/dns-query
+  nameserver-policy:
+    '+.ts.net': '100.100.100.100'
+    geosite:bilibili,cn,private:
+      - https://1.12.12.12/dns-query
+      - https://223.5.5.5/dns-query
+    rule-set:Privacy,Hijacking:
+      - rcode://success
+    geosite:category-ads-all:
+      - rcode://success
+
+# 节点筛选相关
+TW: &TW '^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+JP: &JP '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+KR: &KR '^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|Korea)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+SG: &SG '^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+US: &US '^(?=.*((?i)🇺🇸|🇨🇦|美国|纽约|芝加哥|佛罗里达|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States|CA|CANADA)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+EU: &EU '^(?=.*((?i)🇪🇺|🇬🇧|英国|伦敦|(\b(UK|United Kingdom)\b)|🇩🇪|德国|(\b(DE|Germany)\b)|🇳🇱|荷兰|(\b(NL|Netherlands)\b)|🇫🇷|法国|(\b(FR|France)\b)|🇸🇪|瑞典|(\b(SE|Sweden)\b)|🇷🇺|俄罗斯|(\b(RU|Russia)\b)|🇪🇺|(\b(EU|Europe)\b)|🇮🇹|意大利|(\b(IT|Italy)\b)|🇨🇭|瑞士|(\b(CH|Switzerland)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+Other: &Other '^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|香港|(\b(HK|Hong)\b)|台湾|🇹🇼|(\b(TW|Tai|Taiwan)\b)|日本|(\b(JP|Japan)\b)|韩国|(\b(KR|Korea)\b)|新加坡|(\b(SG|Singapore)\b)|美国|🇺🇸|(\b(US|United States)\b)|加拿大|🇨🇦|(\b(CA|Canada)\b)|英国|🇬🇧|(\b(UK|United Kingdom)\b)|德国|🇩🇪|(\b(DE|Germany)\b)|荷兰|🇳🇱|(\b(NL|Netherlands)\b)|法国|🇫🇷|(\b(FR|France)\b)|瑞典|🇸🇪|(\b(SE|Sweden)\b)|俄罗斯|🇷🇺|(\b(RU|Russia)\b)|欧洲|🇪🇺|(\b(EU|Europe)\b)|澳大利亚|🇦🇺|(\b(墨尔本|Australia)\b)|意大利|🇮🇹|(\b(IT|Italy)\b)|瑞士|🇨🇭|(\b(CH|Switzerland)\b)|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$'
+
+# 代理组相关
+Select: &Select {type: select, proxies: [🚀, 🇹🇼, 🇯🇵, 🇰🇷, 🇸🇬, 🇺🇸, 🇪🇺, 🗺️, DIRECT]}
+UrlTest: &UrlTest {type: url-test, interval: 300, tolerance: 20, lazy: true, url: 'http://cp.cloudflare.com', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
+FallBack: &FallBack {type: fallback, interval: 300, lazy: true, url: 'http://cp.cloudflare.com', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
+LoadBalance: &LoadBalance {type: load-balance, interval: 300, lazy: true, url: 'http://cp.cloudflare.com', disable-udp: false, strategy: consistent-hashing, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
+
+# 代理组
+proxy-groups:
+ - {name: ✅, <<: *Select, proxies: [🚀,DIRECT]}
+# 节点切换
+ - {name: 🚀, <<: *Select, proxies: [🇹🇼,🇯🇵,🇰🇷,🇸🇬,🇺🇸,🇪🇺,🗺️,DIRECT]}
+ - {name: 🐟, <<: *Select, proxies: [🚀,🇹🇼,🇯🇵,🇰🇷,🇸🇬,🇺🇸,🇪🇺,🗺️]}
+ - {name: 🅱️Bili, <<: *Select, proxies: [DIRECT,🇹🇼,REJECT]}
+ - {name: 👁️, <<: *Select, proxies: [DIRECT,🚀]}
+ - {name: 🅿️, <<: *Select, proxies: [DIRECT,🚀]}
+# AI平台
+ - {name: 🧠, <<: *Select, proxies: [🚀,🇹🇼,🇯🇵,🇰🇷,🇸🇬,🇺🇸,🇪🇺,🗺️]}
+# 谷歌服务
+ - {name: 🅶cn, <<: *Select}
+ - {name: 🅶dl, <<: *Select}
+ - {name: 🅶fcm, <<: *Select}
+ - {name: 🅶, <<: *Select}
+# 国际流媒体
+ - {name: 📺Media, <<: *Select}
+ - {name: ✈️Telegram, <<: *Select}
+# 苹果服务
+ - {name: 🍎class, <<: *Select, proxies: [🚀,🇹🇼,🇯🇵,🇰🇷,🇸🇬,🇺🇸,🇪🇺,🗺️,DIRECT]}
+ - {name: 🍎, <<: *Select, proxies: [DIRECT,🚀,🇹🇼,🇯🇵,🇰🇷,🇸🇬,🇺🇸,🇪🇺,🗺️]}
+# 微软服务
+ - {name: 🪟cn, <<: *Select, proxies: [DIRECT,🚀,🇹🇼,🇯🇵,🇰🇷,🇸🇬,🇺🇸,🇪🇺,🗺️]}
+ - {name: 🪟, <<: *Select, proxies: [🚀,DIRECT,🇹🇼,🇯🇵,🇰🇷,🇸🇬,🇺🇸,🇪🇺,🗺️]}
+# 游戏平台
+ - {name: 🎮, <<: *Select}
+# 广告
+ - {name: 🆎, type: select, proxies: [REJECT, DIRECT]}
+
+# 地区节点代理组
+ - {name: 🇹🇼, type: select, proxies: [🇹🇼-🔄, 🇹🇼-🔙, 🇹🇼-📊], include-all-providers: true, filter: *TW}
+ - {name: 🇯🇵, type: select, proxies: [🇯🇵-🔄, 🇯🇵-🔙, 🇯🇵-📊], include-all-providers: true, filter: *JP}
+ - {name: 🇰🇷, type: select, proxies: [🇰🇷-🔄, 🇰🇷-🔙, 🇰🇷-📊], include-all-providers: true, filter: *KR}
+ - {name: 🇸🇬, type: select, proxies: [🇸🇬-🔄, 🇸🇬-🔙, 🇸🇬-📊], include-all-providers: true, filter: *SG}
+ - {name: 🇺🇸, type: select, proxies: [🇺🇸-🔄, 🇺🇸-🔙, 🇺🇸-📊], include-all-providers: true, filter: *US}
+ - {name: 🇪🇺, type: select, proxies: [🇪🇺-🔄, 🇪🇺-🔙, 🇪🇺-📊], include-all-providers: true, filter: *EU}
+# 全部节点
+ - {name: 🗺️, type: select, proxies: [🗺️-🔄, 🗺️-🔙, 🗺️-📊], include-all-providers: true, filter: *Other}
+# 延时优选代理组
+ - {name: 🇹🇼-🔄, <<: *UrlTest, hidden: false, filter: *TW}
+ - {name: 🇯🇵-🔄, <<: *UrlTest, hidden: false, filter: *JP}
+ - {name: 🇰🇷-🔄, <<: *UrlTest, hidden: false, filter: *KR}
+ - {name: 🇸🇬-🔄, <<: *UrlTest, filter: *SG}
+ - {name: 🇺🇸-🔄, <<: *UrlTest, filter: *US}
+ - {name: 🇪🇺-🔄, <<: *UrlTest, filter: *EU}
+ - {name: 🗺️-🔄, <<: *UrlTest, filter: *Other}
+# 故障转移代理组
+ - {name: 🇹🇼-🔙, <<: *FallBack, filter: *TW}
+ - {name: 🇯🇵-🔙, <<: *FallBack, filter: *JP}
+ - {name: 🇰🇷-🔙, <<: *FallBack, filter: *KR}
+ - {name: 🇸🇬-🔙, <<: *FallBack, filter: *SG}
+ - {name: 🇺🇸-🔙, <<: *FallBack, filter: *US}
+ - {name: 🇪🇺-🔙, <<: *FallBack, filter: *EU}
+ - {name: 🗺️-🔙, <<: *FallBack, filter: *Other}
+# 负载均衡代理组
+ - {name: 🇹🇼-📊, <<: *LoadBalance, filter: *TW}
+ - {name: 🇯🇵-📊, <<: *LoadBalance, filter: *JP}
+ - {name: 🇰🇷-📊, <<: *LoadBalance, filter: *KR}
+ - {name: 🇸🇬-📊, <<: *LoadBalance, filter: *SG}
+ - {name: 🇺🇸-📊, <<: *LoadBalance, filter: *US}
+ - {name: 🇪🇺-📊, <<: *LoadBalance, filter: *EU}
+ - {name: 🗺️-📊, <<: *LoadBalance, filter: *Other}
+# 规则类型相关
+c: &c {type: http, behavior: classical, interval: 86400, format: text}
+d: &d {type: http, behavior: domain, interval: 86400, format: mrs}
+i: &i {type: http, behavior: ipcidr, interval: 86400, format: mrs}
+# 远程规则集
+rule-providers:
+# fakeip
+ Privacy: {type: http, behavior: classical, interval: 86400, format: yaml, path: ./ruleset/Privacy.yaml, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Privacy/Privacy_Classical.yaml}
+ Hijacking: {type: http, behavior: classical, interval: 86400, format: yaml, path: ./ruleset/Hijacking.yaml, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Hijacking/Hijacking.yaml}
+ fakeip-filter: {<<: *d, path: ./ruleset/fakeip-filter.mrs, url: https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/clash-ruleset/fakeip-filter.mrs}
+# 隐私网络/局域网
+# myfakeip: {type: http, behavior: domain, interval: 86400, format: text, path: ./ruleset/myfakeip.list, url: https://raw.githubusercontent.com/xyself/xyclash/refs/heads/master/rule/myfakeip.list}
+# lan: {type: http, behavior: ipcidr, interval: 86400, format: text, path: ./ruleset/lan.list, url: https://raw.githubusercontent.com/xyself/xyclash/refs/heads/master/rule/lan.list}
+
+ myproxy: {<<: *c, path: ./ruleset/myproxy.list, url: https://raw.githubusercontent.com/xyself/xyclash/refs/heads/master/rule/myproxy.list}
+ mydirect: {<<: *c, path: ./ruleset/mydirect.list, url: https://raw.githubusercontent.com/xyself/xyclash/refs/heads/master/rule/mydirect.list}
+ parsec: {<<: *c, path: ./ruleset/parsec.list, url: https://raw.githubusercontent.com/xyself/xyclash/refs/heads/master/rule/parsec.list}
+
+# 人工智能
+
+ ai-class: {<<: *c, path: ./ruleset/openai-class.list, url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Clash/Rules/AI.list}
+ twitch-class: {<<: *c, path: ./ruleset/twitch-class.list, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Twitch/Twitch.list}
+ GlobalMedia-class: {<<: *c, path: ./ruleset/GlobalMedia-class.list, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia.list}
+ apple-class: {<<: *c, path: ./ruleset/apple-class.list, url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Clash/Rules/AppleProxyService.list}
+ games-class: {<<: *c, path: ./ruleset/games-class.list, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/Game.list}
+#dust
+ microsoft-cn: {<<: *d, path: ./ruleset/microsoft-cn.mrs, url: https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/clash-ruleset/microsoft-cn.mrs}
+ networktest: {type: http, behavior: domain, interval: 86400, format: text, path: ./ruleset/networktest.list, url: https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/clash-ruleset/networktest.list}
+
+# 分流规则引用
+rules:
+#  - AND,((NETWORK,UDP),(DST-PORT,443)),REJECT
+#  - SCRIPT,quic,REJECT
+  - GEOIP,private,DIRECT,no-resolve
+  - GEOSITE,private,DIRECT
+  - RULE-SET,mydirect,DIRECT
+  - AND,((SRC-PORT,51420),(NETWORK,UDP)),DIRECT
+  - RULE-SET,myproxy,🐟
+  - RULE-SET,parsec,🅿️
+  - RULE-SET,ai-class,🧠
+  - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
+  - AND,((IP-CIDR,162.159.192.0/24),(NETWORK,UDP)),DIRECT
+  - AND,((IP-CIDR,162.159.193.0/24),(NETWORK,UDP)),DIRECT
+  - AND,((IP-CIDR,162.159.197.0/24),(NETWORK,UDP)),DIRECT
+  - AND,((IP-CIDR,162.159.199.0/24),(NETWORK,UDP)),DIRECT
+  - AND,((IP-CIDR6,2606:4700:100::/48),(NETWORK,UDP)),DIRECT
+  - AND,((IP-CIDR6,2606:4700:102::/48),(NETWORK,UDP)),DIRECT
+  - DOMAIN,engage.cloudflareclient.com,DIRECT
+  - IP-ASN,36492,DIRECT,no-resolve
+
+  - GEOSITE,category-ads-all,🆎
+  - RULE-SET,Privacy,🆎
+  - RULE-SET,Hijacking,🆎
+
+  - GEOSITE,youtube,📺Media
+  - RULE-SET,twitch-class,📺Media
+  - GEOSITE,biliintl,📺Media
+  - GEOSITE,tiktok,📺Media
+  - GEOSITE,twitter,📺Media
+  - GEOSITE,spotify,📺Media
+  - RULE-SET,GlobalMedia-class,📺Media
+  - GEOSITE,telegram,✈️Telegram
+
+  - GEOSITE,bilibili,🅱️Bili
+  - GEOSITE,github,🚀
+  - RULE-SET,apple-class,🍎class
+  - GEOSITE,apple,🍎
+
+  - GEOSITE,google-play,🅶dl
+  - DOMAIN-SUFFIX,services.googleaois.cn,🅶dl
+  - DOMAIN-SUFFIX,xn--ngstr-cn-8za9o.com,🅶dl
+  - GEOSITE,googlefcm,🅶fcm
+  - GEOSITE,google-cn,🅶cn
+  - GEOSITE,google,🅶
+
+  - RULE-SET,microsoft-cn,🪟cn
+  - GEOSITE,microsoft,🪟
+
+  - RULE-SET,games-class,🎮
+  - GEOSITE,cn,DIRECT
+  - GEOSITE,geolocation-!cn,🚀
+
+  - GEOIP,google,🅶
+  - GEOIP,telegram,✈️Telegram
+  - GEOIP,twitter,📺Media
+  - GEOIP,bilibili,🅱️Bili,no-resolve
+  - GEOIP,apple,🍎
+  - GEOIP,CN,DIRECT,no-resolve
+  - MATCH,✅
+interface-name: eth0
