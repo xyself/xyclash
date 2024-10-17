@@ -1,13 +1,11 @@
+# +.ingest.us.sentry.io
 +.chatgpt.com
 +.perplexity.ai
-+.ingest.us.sentry.io
-*.parsec.app
 bard.google.com
 gemini.google.com
-connectivitycheck.gstatic.com
-+.ingest.us.sentry.io
-+.genet-dab.ts.net
++.parsec.app
 +.ts.net
-log.tailscale.io
++.+.ts.net
++.genet-dab.ts.net
+log.tailscale.*
 controlplane.tailscale.com
-log.tailscale.com
