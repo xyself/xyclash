@@ -1,12 +1,12 @@
 # NAME: PrivateTracker
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2024-11-10 02:12:27
-# DOMAIN: 168
+# UPDATED: 2024-11-12 02:13:30
+# DOMAIN: 163
 # DOMAIN-KEYWORD: 4
 # DOMAIN-SUFFIX: 123
 # IP-CIDR: 3
-# TOTAL: 298
+# TOTAL: 293
 payload:
   - DOMAIN,0123456789nonexistent.com
   - DOMAIN,0d.kebhana.mx
@@ -28,6 +28,7 @@ payload:
   - DOMAIN,concen.org
   - DOMAIN,d40969.acod.regrucolo.ru
   - DOMAIN,discord.heihachi.pw
+  - DOMAIN,ec2-18-191-163-220.us-east-2.compute.amazonaws.com
   - DOMAIN,evan.im
   - DOMAIN,exodus.desync.com
   - DOMAIN,explodie.org
@@ -37,7 +38,6 @@ payload:
   - DOMAIN,highteahop.top
   - DOMAIN,home.yxgz.club
   - DOMAIN,ipv4.rer.lol
-  - DOMAIN,ipv4announce.sktorrent.eu
   - DOMAIN,ipv6.rer.lol
   - DOMAIN,isk.richardsw.club
   - DOMAIN,ismaarino.com
@@ -45,6 +45,7 @@ payload:
   - DOMAIN,kiryuu-test.mywaifu.best
   - DOMAIN,leet-tracker.moe
   - DOMAIN,martin-gebhardt.eu
+  - DOMAIN,mathkangaroo.jp
   - DOMAIN,moonburrow.club
   - DOMAIN,ns-1.x-fins.com
   - DOMAIN,ns1.monolithindustries.com
@@ -68,6 +69,7 @@ payload:
   - DOMAIN,retracker.lanta.me
   - DOMAIN,retracker.spark-rostov.ru
   - DOMAIN,retracker01-msk-virt.corbina.net
+  - DOMAIN,rfc5746.mywaifu.best
   - DOMAIN,run.publictracker.xyz
   - DOMAIN,saltwood.top
   - DOMAIN,seeders-paradise.org
@@ -82,26 +84,23 @@ payload:
   - DOMAIN,t.overflow.biz
   - DOMAIN,taciturn-shadow.spb.ru
   - DOMAIN,tk.greedland.net
-  - DOMAIN,tk1.trackerservers.com
   - DOMAIN,tk2v6.trackerservers.com
   - DOMAIN,tk4.leechshield.link
-  - DOMAIN,torrents.artixlinux.org
   - DOMAIN,torrentsmd.com
   - DOMAIN,tr.abir.ga
   - DOMAIN,tr.burnabyhighstar.com
   - DOMAIN,tr.kxmp.cf
   - DOMAIN,tr.nyacat.pw
   - DOMAIN,tr.zukizuki.org
-  - DOMAIN,tr1.aag.moe
   - DOMAIN,tr4ck3r.duckdns.org
   - DOMAIN,trackarr.org
   - DOMAIN,tracker-udp.gbitt.info
   - DOMAIN,tracker-zhuqiy.dgj055.icu
   - DOMAIN,tracker.0x7c0.com
+  - DOMAIN,tracker.auctor.tv
   - DOMAIN,tracker.beeimg.com
   - DOMAIN,tracker.bittor.pw
   - DOMAIN,tracker.bjut.jp
-  - DOMAIN,tracker.breizh.pm
   - DOMAIN,tracker.bt-hash.com
   - DOMAIN,tracker.bt4g.com
   - DOMAIN,tracker.bz
@@ -109,14 +108,12 @@ payload:
   - DOMAIN,tracker.corpscorp.online
   - DOMAIN,tracker.cyberia.is
   - DOMAIN,tracker.darkness.services
-  - DOMAIN,tracker.ddunlimited.net
   - DOMAIN,tracker.deadorbit.nl
   - DOMAIN,tracker.dler.com
   - DOMAIN,tracker.dler.org
   - DOMAIN,tracker.dmcomic.org
   - DOMAIN,tracker.dump.cl
   - DOMAIN,tracker.edkj.club
-  - DOMAIN,tracker.electro-torrent.pl
   - DOMAIN,tracker.filemail.com
   - DOMAIN,tracker.fnix.net
   - DOMAIN,tracker.gcrenwp.top
@@ -134,7 +131,6 @@ payload:
   - DOMAIN,tracker.mywaifu.best
   - DOMAIN,tracker.ololosh.space
   - DOMAIN,tracker.opentrackr.org
-  - DOMAIN,tracker.openwebtorrent.com
   - DOMAIN,tracker.peckservers.com
   - DOMAIN,tracker.pmman.tech
   - DOMAIN,tracker.qu.ax
@@ -144,11 +140,11 @@ payload:
   - DOMAIN,tracker.skyts.net
   - DOMAIN,tracker.srv00.com
   - DOMAIN,tracker.tamersunion.org
-  - DOMAIN,tracker.theoks.net
   - DOMAIN,tracker.tiny-vps.com
   - DOMAIN,tracker.torrent.eu.org
   - DOMAIN,tracker.torrust-demo.com
   - DOMAIN,tracker.tryhackx.org
+  - DOMAIN,tracker.uraniumhexafluori.de
   - DOMAIN,tracker.vanitycore.co
   - DOMAIN,tracker.vraphim.com
   - DOMAIN,tracker.waaa.moe
@@ -157,14 +153,12 @@ payload:
   - DOMAIN,tracker1.520.jp
   - DOMAIN,tracker1.bt.moack.co.kr
   - DOMAIN,tracker1.itzmx.com
-  - DOMAIN,tracker1.myporn.club
   - DOMAIN,tracker2.dler.org
   - DOMAIN,tracker2.itzmx.com
   - DOMAIN,tracker3.itzmx.com
   - DOMAIN,tracker4.itzmx.com
   - DOMAIN,tracker4.leechshield.link
   - DOMAIN,tracker810.xyz
-  - DOMAIN,trackers.mlsub.net
   - DOMAIN,ttk2.nbaonlineservice.com
   - DOMAIN,u4.trakx.crim.ist
   - DOMAIN,u6.trakx.crim.ist
@@ -175,6 +169,7 @@ payload:
   - DOMAIN,www.torrent.eu.org
   - DOMAIN,www.torrentsnipe.info
   - DOMAIN,www.wareztorrent.com
+  - DOMAIN,yahor.of.by
   - DOMAIN,z.mercax.com
   - DOMAIN-SUFFIX,1ptba.com
   - DOMAIN-SUFFIX,2xfree.org
