@@ -1,19 +1,19 @@
 # NAME: PrivateTracker
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-01-13 02:13:02
-# DOMAIN: 144
+# UPDATED: 2025-01-16 02:13:36
+# DOMAIN: 137
 # DOMAIN-KEYWORD: 4
 # DOMAIN-SUFFIX: 123
 # IP-CIDR: 3
-# TOTAL: 274
+# TOTAL: 267
 DOMAIN,0123456789nonexistent.com
 DOMAIN,0d.kebhana.mx
 DOMAIN,1337.abcvg.info
+DOMAIN,6ahddutb1ucc3cp.ru
 DOMAIN,api.ipv4online.uk
 DOMAIN,bandito.byterunner.io
 DOMAIN,bittorrent-tracker.e-n-c-r-y-p-t.net
-DOMAIN,bt.ktrackers.com
 DOMAIN,bt.okmp3.ru
 DOMAIN,bt.poletracker.org
 DOMAIN,bt.rer.lol
@@ -34,13 +34,10 @@ DOMAIN,home.yxgz.club
 DOMAIN,ipv4.rer.lol
 DOMAIN,ipv4announce.sktorrent.eu
 DOMAIN,ipv6.rer.lol
-DOMAIN,isk.richardsw.club
 DOMAIN,ismaarino.com
 DOMAIN,martin-gebhardt.eu
 DOMAIN,ns-1.x-fins.com
-DOMAIN,ns1.monolithindustries.com
 DOMAIN,nyaa.tracker.wf
-DOMAIN,odd-hd.fr
 DOMAIN,open.acgtracker.com
 DOMAIN,open.demonii.com
 DOMAIN,open.dstud.io
@@ -52,14 +49,13 @@ DOMAIN,opentor.org
 DOMAIN,opentracker.io
 DOMAIN,p2p.publictracker.xyz
 DOMAIN,p4p.arenabg.com
-DOMAIN,public.tracker.vraphim.com
 DOMAIN,r.l5.ca
 DOMAIN,retracker.hotplug.ru
 DOMAIN,retracker.lanta.me
 DOMAIN,retracker.spark-rostov.ru
 DOMAIN,retracker.x2k.ru
+DOMAIN,rfc5746.mywaifu.best
 DOMAIN,seeders-paradise.org
-DOMAIN,seedpeer.net
 DOMAIN,serpb.vpsburti.com
 DOMAIN,servandroidkino.ru
 DOMAIN,share.hkg-fansub.info
@@ -74,8 +70,7 @@ DOMAIN,torrentsmd.com
 DOMAIN,tr.burnabyhighstar.com
 DOMAIN,tr.nyacat.pw
 DOMAIN,tr.zukizuki.org
-DOMAIN,tr1.aag.moe
-DOMAIN,tr2.trkb.ru
+DOMAIN,tr3.ysagin.top
 DOMAIN,tr4ck3r.duckdns.org
 DOMAIN,trackarr.org
 DOMAIN,tracker-udp.gbitt.info
@@ -96,6 +91,7 @@ DOMAIN,tracker.deadorbit.nl
 DOMAIN,tracker.dler.com
 DOMAIN,tracker.dler.org
 DOMAIN,tracker.dmcomic.org
+DOMAIN,tracker.dump.cl
 DOMAIN,tracker.filemail.com
 DOMAIN,tracker.fnix.net
 DOMAIN,tracker.gcrenwp.top
@@ -121,19 +117,16 @@ DOMAIN,tracker.sbsub.com
 DOMAIN,tracker.skynetcloud.site
 DOMAIN,tracker.skyts.net
 DOMAIN,tracker.srv00.com
-DOMAIN,tracker.theoks.net
 DOMAIN,tracker.tiny-vps.com
 DOMAIN,tracker.torrent.eu.org
 DOMAIN,tracker.torrust-demo.com
 DOMAIN,tracker.tryhackx.org
 DOMAIN,tracker.vanitycore.co
-DOMAIN,tracker.vraphim.com
 DOMAIN,tracker.waaa.moe
 DOMAIN,tracker.xiaoduola.xyz
 DOMAIN,tracker.yemekyedim.com
 DOMAIN,tracker.yume-hatsuyuki.moe
 DOMAIN,tracker1.520.jp
-DOMAIN,tracker1.itzmx.com
 DOMAIN,tracker1.myporn.club
 DOMAIN,tracker2.dler.org
 DOMAIN,tracker2.itzmx.com
