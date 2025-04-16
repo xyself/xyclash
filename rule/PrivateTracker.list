@@ -1,20 +1,17 @@
 # NAME: PrivateTracker
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-04-12 02:14:39
-# DOMAIN: 148
+# UPDATED: 2025-04-16 02:13:57
+# DOMAIN: 146
 # DOMAIN-KEYWORD: 4
 # DOMAIN-SUFFIX: 123
 # IP-CIDR: 3
-# TOTAL: 278
+# TOTAL: 276
 DOMAIN,0123456789nonexistent.com
 DOMAIN,0d.kebhana.mx
 DOMAIN,1337.abcvg.info
 DOMAIN,4.tracker.devnak.win
-DOMAIN,6.tracker.devnak.win
-DOMAIN,admin.52ywp.com
 DOMAIN,bandito.byterunner.io
-DOMAIN,bittorrent-tracker.e-n-c-r-y-p-t.net
 DOMAIN,bt.ktrackers.com
 DOMAIN,bt.okmp3.ru
 DOMAIN,bt.poletracker.org
@@ -22,6 +19,7 @@ DOMAIN,bt.rer.lol
 DOMAIN,bt1.xxxxbt.cc
 DOMAIN,buny.uk
 DOMAIN,ch3oh.ru
+DOMAIN,chihaya.de
 DOMAIN,concen.org
 DOMAIN,d40969.acod.regrucolo.ru
 DOMAIN,discord.heihachi.pw
@@ -40,6 +38,7 @@ DOMAIN,ismaarino.com
 DOMAIN,leet-tracker.moe
 DOMAIN,lucke.fenesisu.moe
 DOMAIN,martin-gebhardt.eu
+DOMAIN,ns-1.x-fins.com
 DOMAIN,ns3109441.mypdns.org
 DOMAIN,nyaa.tracker.wf
 DOMAIN,open.acgtracker.com
@@ -47,7 +46,6 @@ DOMAIN,open.demonii.com
 DOMAIN,open.dstud.io
 DOMAIN,open.free-tracker.ga
 DOMAIN,open.stealth.si
-DOMAIN,open.tracker.ink
 DOMAIN,open.trackerlist.xyz
 DOMAIN,opentor.org
 DOMAIN,opentracker.io
@@ -76,7 +74,6 @@ DOMAIN,tr.zukizuki.org
 DOMAIN,tr3.ysagin.top
 DOMAIN,tr4ck3r.duckdns.org
 DOMAIN,tracker-udp.gbitt.info
-DOMAIN,tracker-v6.opendev.cloud
 DOMAIN,tracker.0x7c0.com
 DOMAIN,tracker.23794.top
 DOMAIN,tracker.aburaya.live
@@ -103,6 +100,7 @@ DOMAIN,tracker.gcrenwp.top
 DOMAIN,tracker.ghostchu-services.top
 DOMAIN,tracker.gigantino.net
 DOMAIN,tracker.gmi.gd
+DOMAIN,tracker.home.kmzs123.cn
 DOMAIN,tracker.iperson.xyz
 DOMAIN,tracker.ipv6tracker.org
 DOMAIN,tracker.ipv6tracker.ru
@@ -114,11 +112,10 @@ DOMAIN,tracker.leechshield.link
 DOMAIN,tracker.lilithraws.org
 DOMAIN,tracker.lintk.me
 DOMAIN,tracker.linvk.com
+DOMAIN,tracker.lyretain.site
+DOMAIN,tracker.moeblog.cn
 DOMAIN,tracker.moxing.party
 DOMAIN,tracker.mywaifu.best
-DOMAIN,tracker.netmap.top
-DOMAIN,tracker.nitrix.me
-DOMAIN,tracker.ololosh.space
 DOMAIN,tracker.opentrackr.org
 DOMAIN,tracker.openwebtorrent.com
 DOMAIN,tracker.pmman.tech
@@ -149,6 +146,7 @@ DOMAIN,tracker4.itzmx.com
 DOMAIN,tracker810.xyz
 DOMAIN,ttk2.nbaonlineservice.com
 DOMAIN,udp.tracker.projectk.org
+DOMAIN,utracker.ghostchu-services.top
 DOMAIN,wepzone.net
 DOMAIN,www.all4nothin.net
 DOMAIN,www.genesis-sp.org
