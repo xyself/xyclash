@@ -1,12 +1,12 @@
 # NAME: PrivateTracker
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-05-01 02:14:53
-# DOMAIN: 145
+# UPDATED: 2025-05-04 02:13:57
+# DOMAIN: 143
 # DOMAIN-KEYWORD: 4
 # DOMAIN-SUFFIX: 123
 # IP-CIDR: 3
-# TOTAL: 275
+# TOTAL: 273
 payload:
   - DOMAIN,0123456789nonexistent.com
   - DOMAIN,0d.kebhana.mx
@@ -21,7 +21,6 @@ payload:
   - DOMAIN,buny.uk
   - DOMAIN,chihaya.de
   - DOMAIN,d40969.acod.regrucolo.ru
-  - DOMAIN,discord.heihachi.pw
   - DOMAIN,evan.im
   - DOMAIN,exodus.desync.com
   - DOMAIN,explodie.org
@@ -34,6 +33,7 @@ payload:
   - DOMAIN,ipv6.rer.lol
   - DOMAIN,isk.richardsw.club
   - DOMAIN,ismaarino.com
+  - DOMAIN,leet-tracker.moe
   - DOMAIN,lucke.fenesisu.moe
   - DOMAIN,martin-gebhardt.eu
   - DOMAIN,ns3109441.mypdns.org
@@ -62,14 +62,11 @@ payload:
   - DOMAIN,taciturn-shadow.spb.ru
   - DOMAIN,thouvenin.cloud
   - DOMAIN,tk.greedland.net
-  - DOMAIN,torrent.hificode.in
   - DOMAIN,torrent.i.ng
   - DOMAIN,torrentsmd.com
   - DOMAIN,tr.abiir.top
-  - DOMAIN,tr.abir.ga
   - DOMAIN,tr.nyacat.pw
   - DOMAIN,tr.zukizuki.org
-  - DOMAIN,tr3.ysagin.top
   - DOMAIN,tr4ck3r.duckdns.org
   - DOMAIN,trackarr.org
   - DOMAIN,tracker-udp.gbitt.info
@@ -87,6 +84,7 @@ payload:
   - DOMAIN,tracker.cyberia.is
   - DOMAIN,tracker.darkness.services
   - DOMAIN,tracker.ddunlimited.net
+  - DOMAIN,tracker.deadorbit.nl
   - DOMAIN,tracker.dler.com
   - DOMAIN,tracker.dler.org
   - DOMAIN,tracker.dmcomic.org
@@ -123,12 +121,12 @@ payload:
   - DOMAIN,tracker.sbsub.com
   - DOMAIN,tracker.skyts.net
   - DOMAIN,tracker.srv00.com
-  - DOMAIN,tracker.theoks.net
   - DOMAIN,tracker.therarbg.to
   - DOMAIN,tracker.tiny-vps.com
   - DOMAIN,tracker.torrent.eu.org
   - DOMAIN,tracker.torrust-demo.com
   - DOMAIN,tracker.trackarr.org
+  - DOMAIN,tracker.tritan.gg
   - DOMAIN,tracker.tryhackx.org
   - DOMAIN,tracker.valete.tf
   - DOMAIN,tracker.vanitycore.co
@@ -139,7 +137,6 @@ payload:
   - DOMAIN,tracker.zhuqiy.top
   - DOMAIN,tracker1.520.jp
   - DOMAIN,tracker1.itzmx.com
-  - DOMAIN,tracker1.myporn.club
   - DOMAIN,tracker2.dler.org
   - DOMAIN,tracker2.itzmx.com
   - DOMAIN,tracker3.itzmx.com
@@ -147,6 +144,7 @@ payload:
   - DOMAIN,tracker810.xyz
   - DOMAIN,ttk2.nbaonlineservice.com
   - DOMAIN,udp.tracker.projectk.org
+  - DOMAIN,utracker.ghostchu-services.top
   - DOMAIN,wepzone.net
   - DOMAIN,www.all4nothin.net
   - DOMAIN,www.genesis-sp.org
