@@ -15,3 +15,9 @@ DOMAIN-SUFFIX,passwordsleakcheck-pa.googleapis.com
 DOMAIN-SUFFIX,hostloc.me
 DOMAIN-SUFFIX,hyperbeam.com
 DOMAIN-SUFFIX,hyperbeam.dev
+DOMAIN,google-ohttp-relay-safebrowsing.fastly-edge.com
+DOMAIN,www.googletagmanager.com
+DOMAIN,blz-contentstack-images.akamaized.net
+DOMAIN,blz-contentstack-assets.akamaized.net
+DOMAIN,cm.g.doubleclick.net
+DOMAIN,clientservices.googleapis.com
