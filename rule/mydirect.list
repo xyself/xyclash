@@ -13,8 +13,11 @@ DOMAIN-SUFFIX,stun6.parsec.app
 DOMAIN-SUFFIX,cdn.jsdelivr.net
 DOMAIN-SUFFIX,mirror.ghproxy.com
 DOMAIN-SUFFIX,api-edge.cognitive.microsofttranslator.com
+DOMAIN,eastasia.tts.speech.microsoft.com
+DOMAIN,dev.microsofttranslator.com
 DOMAIN-SUFFIX,tts.speech.microsoft.com
-DOMAIN-SUFFIX,www.msftconnecttest.com
+DOMAIN-SUFFIX,speech.microsoft.com
+DOMAIN-SUFFIX,microsofttranslator.com
 DOMAIN-SUFFIX,clash.razord.top
 DOMAIN-SUFFIX,yacd.metacubex.one
 DOMAIN-SUFFIX,yacd.haishan.me
