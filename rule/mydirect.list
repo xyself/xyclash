@@ -26,6 +26,7 @@ DOMAIN-SUFFIX,raw.gitmirror.com
 DOMAIN-SUFFIX,api-proxy.me
 DOMAIN-SUFFIX,tgapi.chenguaself.tk
 DOMAIN-SUFFIX,tmate.io
+DOMAIN-SUFFIX,hcfy.ai
 IP-CIDR,192.168.3.5/32,no-resolve
 IP-CIDR,192.168.3.6/32,no-resolve
 IP-CIDR,192.168.3.7/32,no-resolve
