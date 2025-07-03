@@ -1,27 +1,43 @@
+# tailscale类
 DOMAIN-SUFFIX,tailscale.com
 DOMAIN-SUFFIX,tailscale.io
 DOMAIN-SUFFIX,ts.net
 DOMAIN-SUFFIX,zerotier.com
+
+# Clash dashboard
+DOMAIN-SUFFIX,clash.razord.top
+DOMAIN-SUFFIX,yacd.metacubex.one
+DOMAIN-SUFFIX,yacd.haishan.me
+DOMAIN-SUFFIX,d.metacubex.one
+
+# 镜像网站
+DOMAIN-SUFFIX,mirror.ghproxy.com
+DOMAIN-SUFFIX,hub.fgit.mxtrans.net
+DOMAIN-SUFFIX,github.moeyy.xyz
+DOMAIN-SUFFIX,ghproxy.net
+DOMAIN-SUFFIX,githubfast.com
+DOMAIN-SUFFIX,hub.incept.pw
+DOMAIN-SUFFIX,hub.incept.pw
+DOMAIN-SUFFIX,kkgithub.com
+DOMAIN-SUFFIX,gitclone.com
+
 DOMAIN-SUFFIX,wangsiyuan.synology.me
 DOMAIN-SUFFIX,masuit.com
 DOMAIN-SUFFIX,dyndns.com
 DOMAIN-SUFFIX,synology.com
 DOMAIN-SUFFIX,whatismyip.akamai.com
 DOMAIN-SUFFIX,digitalocean.com
-DOMAIN-SUFFIX,tts.speech.microsoft.com
+
+
 DOMAIN-SUFFIX,stun6.parsec.app
-DOMAIN-SUFFIX,cdn.jsdelivr.net
-DOMAIN-SUFFIX,mirror.ghproxy.com
+# 微软翻译和tts
 DOMAIN-SUFFIX,api-edge.cognitive.microsofttranslator.com
-DOMAIN,eastasia.tts.speech.microsoft.com
+DOMAIN-KEYWORD,tts.speech.microsoft.com
 DOMAIN,dev.microsofttranslator.com
-DOMAIN-SUFFIX,tts.speech.microsoft.com
+
 DOMAIN-SUFFIX,speech.microsoft.com
 DOMAIN-SUFFIX,microsofttranslator.com
-DOMAIN-SUFFIX,clash.razord.top
-DOMAIN-SUFFIX,yacd.metacubex.one
-DOMAIN-SUFFIX,yacd.haishan.me
-DOMAIN-SUFFIX,d.metacubex.one
+
 DOMAIN-SUFFIX,raw.gitmirror.com
 DOMAIN-SUFFIX,api-proxy.me
 DOMAIN-SUFFIX,tgapi.chenguaself.tk
