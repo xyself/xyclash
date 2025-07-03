@@ -30,11 +30,11 @@ DOMAIN-SUFFIX,digitalocean.com
 
 
 # 微软翻译和 TTS
+DOMAIN-SUFFIX,microsofttranslator.com
 DOMAIN-SUFFIX,api-edge.cognitive.microsofttranslator.com
-DOMAIN-KEYWORD,tts.speech.microsoft.com
 DOMAIN,dev.microsofttranslator.com
 DOMAIN-SUFFIX,speech.microsoft.com
-DOMAIN-SUFFIX,microsofttranslator.com
+DOMAIN-KEYWORD,tts.speech.microsoft.com
 
 # 其他直连
 DOMAIN-SUFFIX,raw.gitmirror.com
@@ -72,3 +72,4 @@ DOMAIN-KEYWORD,tencent
 IP-CIDR,192.168.3.5/32,no-resolve
 IP-CIDR,192.168.3.6/32,no-resolve
 IP-CIDR,192.168.3.7/32,no-resolve
+IP-CIDR,100.64.0.0/10,no-resolve
