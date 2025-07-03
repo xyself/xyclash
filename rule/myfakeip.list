@@ -1,11 +1,22 @@
 # +.ingest.us.sentry.io
+# AI 与 ChatBot
++.openai.com
 +.chatgpt.com
 +.perplexity.ai
 bard.google.com
 gemini.google.com
+
+# Parsec 云游戏
 +.parsec.app
+
+# Tailscale 相关
 +.ts.net
-+.+.ts.net
-+.genet-dab.ts.net
 log.tailscale.*
 controlplane.tailscale.com
+
+# Sentry 错误上报
+#+.ingest.us.sentry.io
+
+# Microsoft 服务
+dev.microsofttranslator.com
++.tts.speech.microsoft.com
