@@ -43,6 +43,31 @@ DOMAIN-SUFFIX,tgapi.chenguaself.tk
 DOMAIN-SUFFIX,tmate.io
 DOMAIN-SUFFIX,hcfy.ai
 
+  # 国内部分
+DOMAIN-SUFFIX,mi.com
+DOMAIN-SUFFIX,miui.com
+DOMAIN-SUFFIX,xiaomi.com
+DOMAIN-SUFFIX,oneplus.cn
+DOMAIN-SUFFIX,hicloud.com
+DOMAIN-SUFFIX,huawei.com
+DOMAIN-SUFFIX,vivo.com
+DOMAIN-SUFFIX,oppo.com
+DOMAIN-SUFFIX,meizu.com
+DOMAIN-KEYWORD,wechat
+DOMAIN-KEYWORD,alipay
+DOMAIN-KEYWORD,unionpay
+DOMAIN-SUFFIX,amap.com
+DOMAIN-SUFFIX,dianping.com
+DOMAIN-SUFFIX,meituan.com
+DOMAIN-SUFFIX,baidu.com
+DOMAIN-SUFFIX,bilibili.com
+DOMAIN-SUFFIX,iqiyi.com
+DOMAIN-SUFFIX,zhihu.com
+DOMAIN-KEYWORD,xiami
+DOMAIN-KEYWORD,autonavi
+DOMAIN-SUFFIX,toutiao.com
+DOMAIN-KEYWORD,tencent
+
 # 局域网 IP
 IP-CIDR,192.168.3.5/32,no-resolve
 IP-CIDR,192.168.3.6/32,no-resolve
