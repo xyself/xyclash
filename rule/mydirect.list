@@ -67,7 +67,7 @@ DOMAIN-KEYWORD,xiami
 DOMAIN-KEYWORD,autonavi
 DOMAIN-SUFFIX,toutiao.com
 DOMAIN-KEYWORD,tencent
-
+DOMAIN-SUFFIX,connectivitycheck.gstatic.com
 # 局域网 IP
 IP-CIDR,192.168.3.5/32,no-resolve
 IP-CIDR,192.168.3.6/32,no-resolve
