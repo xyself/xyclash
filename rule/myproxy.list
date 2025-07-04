@@ -1,31 +1,41 @@
+# 独立 IP
 IP-CIDR,117.21.204.45/32
+
+# 互联网服务/工具
 DOMAIN-SUFFIX,tradingview.com
 DOMAIN-SUFFIX,obsproject.com
 DOMAIN-SUFFIX,us.dangbei.com
 DOMAIN-SUFFIX,emotn.com
 DOMAIN-SUFFIX,v2ex.com
 DOMAIN-SUFFIX,mypikpak.com
-DOMAIN-SUFFIX,emotn.com
 DOMAIN-SUFFIX,keeflys.com
 DOMAIN-SUFFIX,gitbook.com
 DOMAIN-SUFFIX,cnbeta.com.tw
 DOMAIN-SUFFIX,branch.io
-DOMAIN-SUFFIX,passwordsleakcheck-pa.googleapis.com
 DOMAIN-SUFFIX,hostloc.me
+
+# Hyperbeam
 DOMAIN-SUFFIX,hyperbeam.com
 DOMAIN-SUFFIX,hyperbeam.dev
-DOMAIN,google-ohttp-relay-safebrowsing.fastly-edge.com
-DOMAIN,www.googletagmanager.com
-DOMAIN,blz-contentstack-images.akamaized.net
-DOMAIN,blz-contentstack-assets.akamaized.net
-DOMAIN,cm.g.doubleclick.net
-DOMAIN,clientservices.googleapis.com
+
+# Google 相关
 DOMAIN-SUFFIX,googlevideo.com
 DOMAIN-SUFFIX,googleapis.com
 DOMAIN-SUFFIX,gstatic.com
 DOMAIN-SUFFIX,ggpht.com
 DOMAIN-SUFFIX,play.googleapis.com
 DOMAIN-SUFFIX,play.google.com
-#DOMAIN-KEYWORD,android
 DOMAIN-SUFFIX,ota.googlezip.net
 DOMAIN-SUFFIX,update.googleapis.com
+DOMAIN,passwordsleakcheck-pa.googleapis.com
+DOMAIN,google-ohttp-relay-safebrowsing.fastly-edge.com
+DOMAIN,www.googletagmanager.com
+DOMAIN,cm.g.doubleclick.net
+DOMAIN,clientservices.googleapis.com
+
+# Akamai 内容分发
+DOMAIN,blz-contentstack-images.akamaized.net
+DOMAIN,blz-contentstack-assets.akamaized.net
+
+# 其它
+#DOMAIN-KEYWORD,android
