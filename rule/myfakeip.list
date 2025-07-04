@@ -13,7 +13,6 @@ gemini.google.com
 +.ts.net
 log.tailscale.*
 controlplane.tailscale.com
-tgapi.chenguaself.tk
 # Sentry 错误上报
 #+.ingest.us.sentry.io
 
