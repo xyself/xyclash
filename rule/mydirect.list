@@ -41,7 +41,7 @@ DOMAIN-SUFFIX,raw.gitmirror.com
 DOMAIN-SUFFIX,api-proxy.me
 DOMAIN-SUFFIX,tmate.io
 DOMAIN-SUFFIX,hcfy.ai
-
+DOMAIN,tgapi.chenguaself.tk
   # 国内部分
 DOMAIN-SUFFIX,mi.com
 DOMAIN-SUFFIX,miui.com
