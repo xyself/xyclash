@@ -31,7 +31,6 @@ DOMAIN,google-ohttp-relay-safebrowsing.fastly-edge.com
 DOMAIN,www.googletagmanager.com
 DOMAIN,cm.g.doubleclick.net
 DOMAIN,clientservices.googleapis.com
-DOMAIN,auth.openai.com
 # Akamai 内容分发
 DOMAIN,blz-contentstack-images.akamaized.net
 DOMAIN,blz-contentstack-assets.akamaized.net
