@@ -1,7 +1,6 @@
 # tailscale 类
 DOMAIN-SUFFIX,tailscale.com
 DOMAIN-SUFFIX,tailscale.io
-DOMAIN-SUFFIX,ts.net
 DOMAIN-SUFFIX,zerotier.com
 
 # Clash dashboard
