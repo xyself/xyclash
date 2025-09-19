@@ -1,4 +1,5 @@
 # tailscale 类
+DOMAIN-REGEX,^derp.*tailscale.com
 DOMAIN-SUFFIX,tailscale.com
 DOMAIN-SUFFIX,tailscale.io
 DOMAIN-SUFFIX,ts.net
@@ -39,7 +40,7 @@ DOMAIN-KEYWORD,tts.speech.microsoft.com
 # 其他直连
 DOMAIN-SUFFIX,raw.gitmirror.com
 DOMAIN-SUFFIX,api-proxy.me
-DOMAIN-SUFFIX,tmate.io
+#DOMAIN-SUFFIX,tmate.io
 DOMAIN-SUFFIX,hcfy.ai
 #DOMAIN,tgapi.chenguaself.tk
   # 国内部分
