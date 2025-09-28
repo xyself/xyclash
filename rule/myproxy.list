@@ -1,6 +1,6 @@
 # 独立 IP
 IP-CIDR,117.21.204.45/32
-
+DOMAIN-SUFFIX,ubuntu.com
 # 互联网服务/工具
 DOMAIN-SUFFIX,tradingview.com
 DOMAIN-SUFFIX,obsproject.com
