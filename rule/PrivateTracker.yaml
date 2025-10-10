@@ -1,27 +1,23 @@
 # NAME: PrivateTracker
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-10-06 02:10:17
-# DOMAIN: 159
+# UPDATED: 2025-10-10 02:09:56
+# DOMAIN: 155
 # DOMAIN-KEYWORD: 4
 # DOMAIN-SUFFIX: 123
 # IP-CIDR: 4
-# TOTAL: 290
+# TOTAL: 286
 payload:
   - DOMAIN,0123456789nonexistent.com
   - DOMAIN,0d.kebhana.mx
-  - DOMAIN,1.tracker.eu.org
   - DOMAIN,1337.abcvg.info
   - DOMAIN,1c.premierzal.ru
-  - DOMAIN,2.tracker.eu.org
-  - DOMAIN,3.tracker.eu.org
-  - DOMAIN,4.tracker.eu.org
-  - DOMAIN,6ahddutb1ucc3cp.ru
   - DOMAIN,aboutbeautifulgallopinghorsesinthegreenpasture.online
   - DOMAIN,admin.52ywp.com
   - DOMAIN,anna.bt.bontal.net
   - DOMAIN,bandito.byterunner.io
   - DOMAIN,bittorrent-tracker.e-n-c-r-y-p-t.net
+  - DOMAIN,bt.bontal.net
   - DOMAIN,bt.okmp3.ru
   - DOMAIN,bt.poletracker.org
   - DOMAIN,bt.rer.lol
@@ -29,23 +25,24 @@ payload:
   - DOMAIN,buny.uk
   - DOMAIN,burmese.app
   - DOMAIN,bvarf.tracker.sh
-  - DOMAIN,ch3oh.ru
   - DOMAIN,concen.org
   - DOMAIN,d40969.acod.regrucolo.ru
+  - DOMAIN,echostar.ddnsfree.com
   - DOMAIN,evan.im
   - DOMAIN,exodus.desync.com
   - DOMAIN,explodie.org
   - DOMAIN,extracker.dahrkael.net
+  - DOMAIN,glotorrents.pw
   - DOMAIN,home.yxgz.club
   - DOMAIN,ipv4.rer.lol
   - DOMAIN,ipv4announce.sktorrent.eu
   - DOMAIN,ipv6.rer.lol
+  - DOMAIN,isk.richardsw.club
   - DOMAIN,martin-gebhardt.eu
   - DOMAIN,ns3109441.mypdns.org
   - DOMAIN,nyaa.tracker.wf
   - DOMAIN,open-tracker.demonoid.ch
   - DOMAIN,open.demonii.com
-  - DOMAIN,open.demonii.si
   - DOMAIN,open.demonoid.ch
   - DOMAIN,open.dstud.io
   - DOMAIN,open.stealth.si
@@ -65,6 +62,7 @@ payload:
   - DOMAIN,shahidrazi.online
   - DOMAIN,share.hkg-fansub.info
   - DOMAIN,shubt.net
+  - DOMAIN,t-backup.213891.xyz
   - DOMAIN,t.213891.xyz
   - DOMAIN,t.overflow.biz
   - DOMAIN,tk.greedland.net
@@ -78,7 +76,6 @@ payload:
   - DOMAIN,tr.kxmp.cf
   - DOMAIN,tr.nyacat.pw
   - DOMAIN,tr.zukizuki.org
-  - DOMAIN,tr3.ysagin.top
   - DOMAIN,tr4ck3r.duckdns.org
   - DOMAIN,tracker-de-2.cutie.dating
   - DOMAIN,tracker-udp.gbitt.info
@@ -96,6 +93,7 @@ payload:
   - DOMAIN,tracker.corpscorp.online
   - DOMAIN,tracker.cutie.dating
   - DOMAIN,tracker.cyberia.is
+  - DOMAIN,tracker.darkness.services
   - DOMAIN,tracker.dhitechnical.com
   - DOMAIN,tracker.dler.com
   - DOMAIN,tracker.dler.org
@@ -107,10 +105,10 @@ payload:
   - DOMAIN,tracker.gcrenwp.top
   - DOMAIN,tracker.ghostchu-services.top
   - DOMAIN,tracker.gmi.gd
+  - DOMAIN,tracker.guguan.us.kg
   - DOMAIN,tracker.healthcareindia.store
   - DOMAIN,tracker.hifimarket.in
   - DOMAIN,tracker.hifitechindia.com
-  - DOMAIN,tracker.iperson.xyz
   - DOMAIN,tracker.ipv6tracker.org
   - DOMAIN,tracker.ipv6tracker.ru
   - DOMAIN,tracker.jdx3.org
@@ -120,6 +118,7 @@ payload:
   - DOMAIN,tracker.moeblog.cn
   - DOMAIN,tracker.moxing.party
   - DOMAIN,tracker.mywaifu.best
+  - DOMAIN,tracker.ololosh.space
   - DOMAIN,tracker.opentrackr.org
   - DOMAIN,tracker.openwebtorrent.com
   - DOMAIN,tracker.plx.im
@@ -134,20 +133,17 @@ payload:
   - DOMAIN,tracker.tamersunion.org
   - DOMAIN,tracker.theoks.net
   - DOMAIN,tracker.therarbg.to
-  - DOMAIN,tracker.tnl.one
   - DOMAIN,tracker.torrent.eu.org
+  - DOMAIN,tracker.torrust-demo.com
   - DOMAIN,tracker.tritan.gg
   - DOMAIN,tracker.tryhackx.org
   - DOMAIN,tracker.tvunderground.org.ru
   - DOMAIN,tracker.uraniumhexafluori.de
   - DOMAIN,tracker.valete.tf
   - DOMAIN,tracker.vanitycore.co
-  - DOMAIN,tracker.waaa.moe
   - DOMAIN,tracker.xiaoduola.xyz
-  - DOMAIN,tracker.xn--djrq4gl4hvoi.top
   - DOMAIN,tracker.yemekyedim.com
   - DOMAIN,tracker.zhuqiy.com
-  - DOMAIN,tracker.zhuqiy.top
   - DOMAIN,tracker.zupix.online
   - DOMAIN,tracker1.520.jp
   - DOMAIN,tracker1.bt.moack.co.kr
@@ -157,6 +153,7 @@ payload:
   - DOMAIN,tracker3.itzmx.com
   - DOMAIN,tracker4.itzmx.com
   - DOMAIN,tracker810.xyz
+  - DOMAIN,trl-zhuqiy.dgj055.icu
   - DOMAIN,ttk2.nbaonlineservice.com
   - DOMAIN,udp.tracker.projectk.org
   - DOMAIN,v74853.hosted-by-vdsina.com
@@ -166,7 +163,6 @@ payload:
   - DOMAIN,www.torrent.eu.org
   - DOMAIN,www.torrentsnipe.info
   - DOMAIN,www.wareztorrent.com
-  - DOMAIN,yuki.bt.bontal.net
   - DOMAIN-SUFFIX,1ptba.com
   - DOMAIN-SUFFIX,2xfree.org
   - DOMAIN-SUFFIX,52pt.site
