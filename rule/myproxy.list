@@ -18,6 +18,7 @@ DOMAIN-SUFFIX,hyperbeam.com
 DOMAIN-SUFFIX,hyperbeam.dev
 
 # Google 相关
+DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
 DOMAIN-SUFFIX,googlevideo.com
 DOMAIN-SUFFIX,googleapis.com
 DOMAIN-SUFFIX,gstatic.com
