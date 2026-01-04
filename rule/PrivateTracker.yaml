@@ -1,19 +1,17 @@
 # NAME: PrivateTracker
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2026-01-01 02:09:22
-# DOMAIN: 123
+# UPDATED: 2026-01-04 02:09:16
+# DOMAIN: 122
 # DOMAIN-KEYWORD: 4
 # DOMAIN-SUFFIX: 123
 # IP-CIDR: 4
-# TOTAL: 254
+# TOTAL: 253
 payload:
   - DOMAIN,1337.abcvg.info
   - DOMAIN,6ahddutb1ucc3cp.ru
   - DOMAIN,aboutbeautifulgallopinghorsesinthegreenpasture.online
-  - DOMAIN,admin.52ywp.com
   - DOMAIN,anna.bt.bontal.net
-  - DOMAIN,bandito.byterunner.io
   - DOMAIN,bittorrent-tracker.e-n-c-r-y-p-t.net
   - DOMAIN,bt.bontal.net
   - DOMAIN,bt.okmp3.ru
@@ -35,9 +33,9 @@ payload:
   - DOMAIN,lucke.fenesisu.moe
   - DOMAIN,martin-gebhardt.eu
   - DOMAIN,node01.trackerstatus.live
+  - DOMAIN,node02.torrentonline.cc
   - DOMAIN,ns575949.ip-51-222-82.net
   - DOMAIN,nyaa.tracker.wf
-  - DOMAIN,open-tracker.demonoid.ch
   - DOMAIN,open.acgtracker.com
   - DOMAIN,open.demonii.com
   - DOMAIN,open.demonoid.ch
@@ -59,7 +57,6 @@ payload:
   - DOMAIN,torrentclub.online
   - DOMAIN,torrentsmd.com
   - DOMAIN,tr.abiir.top
-  - DOMAIN,tr.abir.ga
   - DOMAIN,tr.highstar.shop
   - DOMAIN,tr.kxmp.cf
   - DOMAIN,tr.nyacat.pw
@@ -69,7 +66,6 @@ payload:
   - DOMAIN,tracker.0x7c0.com
   - DOMAIN,tracker.1h.is
   - DOMAIN,tracker.23794.top
-  - DOMAIN,tracker.alaskantf.com
   - DOMAIN,tracker.beeimg.com
   - DOMAIN,tracker.bittor.pw
   - DOMAIN,tracker.bluefrog.pw
@@ -106,7 +102,9 @@ payload:
   - DOMAIN,tracker.pmman.tech
   - DOMAIN,tracker.qu.ax
   - DOMAIN,tracker.renfei.net
+  - DOMAIN,tracker.skynetcloud.site
   - DOMAIN,tracker.skyts.net
+  - DOMAIN,tracker.soshifanclub.com
   - DOMAIN,tracker.srv00.com
   - DOMAIN,tracker.t-1.org
   - DOMAIN,tracker.therarbg.to
@@ -120,6 +118,7 @@ payload:
   - DOMAIN,tracker.waaa.moe
   - DOMAIN,tracker.zhuqiy.com
   - DOMAIN,tracker1.520.jp
+  - DOMAIN,tracker1.myporn.club
   - DOMAIN,tracker1.t-1.org
   - DOMAIN,tracker2.dler.org
   - DOMAIN,tracker2.itzmx.com
