@@ -12,6 +12,7 @@ DOMAIN-SUFFIX,yacd.haishan.me
 DOMAIN-SUFFIX,d.metacubex.one
 
 # 镜像网站
+DOMAIN-SUFFIX,tgapi.chenguaself.tk
 DOMAIN-SUFFIX,mirror.ghproxy.com
 DOMAIN-SUFFIX,hub.fgit.mxtrans.net
 DOMAIN-SUFFIX,github.moeyy.xyz
@@ -22,6 +23,7 @@ DOMAIN-SUFFIX,kkgithub.com
 DOMAIN-SUFFIX,gitclone.com
 
 # 个人与常用服务
+
 DOMAIN-SUFFIX,wangsiyuan.synology.me
 DOMAIN-SUFFIX,masuit.com
 DOMAIN-SUFFIX,dyndns.com
