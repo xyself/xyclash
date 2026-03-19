@@ -8,10 +8,8 @@ gemini.google.com
 
 # Parsec 云游戏
 +.parsec.app
-
-# Tailscale 相关
-+.ts.net
-log.tailscale.*
+derp*.tailscale.com
+*.ts.net
 controlplane.tailscale.com
 # Sentry 错误上报
 #+.ingest.us.sentry.io
