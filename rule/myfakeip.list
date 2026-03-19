@@ -10,10 +10,10 @@ gemini.google.com
 +.parsec.app
 
 # Tailscale 相关
-*.ts.net
-log.tailscale.*
-derp*.tailscale.com
-
++.tailscale.com
++.ts.net
++.derp.tailscale.com
++.tailscale.io
 controlplane.tailscale.com
 # Sentry 错误上报
 #+.ingest.us.sentry.io
