@@ -18,7 +18,7 @@ DOMAIN-SUFFIX,hyperbeam.com
 DOMAIN-SUFFIX,hyperbeam.dev
 
 # RSSHUB
-DOMAIN,app.folo.is
+DOMAIN-SUFFIX,folo.is
 # Google 相关
 DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
 DOMAIN-SUFFIX,googlevideo.com
