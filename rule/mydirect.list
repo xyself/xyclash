@@ -23,7 +23,8 @@ DOMAIN-SUFFIX,kkgithub.com
 DOMAIN-SUFFIX,gitclone.com
 
 # 个人与常用服务
-
+DOMAIN-SUFFIX,bangalore.restream.io
+DOMAIN-SUFFIX,live.restream.io
 DOMAIN-SUFFIX,wangsiyuan.synology.me
 DOMAIN-SUFFIX,masuit.com
 DOMAIN-SUFFIX,dyndns.com
