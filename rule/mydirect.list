@@ -30,6 +30,8 @@ DOMAIN-SUFFIX,dyndns.com
 DOMAIN-SUFFIX,synology.com
 DOMAIN-SUFFIX,whatismyip.akamai.com
 DOMAIN-SUFFIX,digitalocean.com
+DOMAIN-SUFFIX,oracle.com
+DOMAIN-SUFFIX,oraclecloud.com
 
 
 # 微软翻译和 TTS
