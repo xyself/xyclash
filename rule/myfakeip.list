@@ -21,4 +21,5 @@ controlplane.tailscale.com
 # Microsoft 服务
 dev.microsofttranslator.com
 +.tts.speech.microsoft.com
-+.3gppnetwork.org
+epdg.epc.mnc066.mcc515.pub.3gppnetwork.org
+epdg.epc.mnc010.mcc232.pub.3gppnetwork.org
